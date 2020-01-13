@@ -1,0 +1,24 @@
+@import "../../base/_index";
+.widget-404 {
+  .uk-background-cover {
+    height: calc(100vh - 141px);
+  }
+  .details {
+    z-index: 1;
+    padding: 40px;
+    //text-align: center;
+    h1,
+    h2 {
+      display: block;
+      color: $white;
+      
+      margin: 0;
+    }
+    h2 {
+      @include font-size($xxl-font);
+    }
+    h1 {
+      @include font-size($xxxxl-font);
+    }
+  }
+}

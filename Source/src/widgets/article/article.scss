@@ -1,0 +1,157 @@
+@import "../../base/_index";
+.widget-article {
+  > .uk-cover-container {
+    height: 140px;
+    @include custom-width(750px) {
+      height: 280px;
+      //margin-bottom: -200px;
+    }
+    @include md{
+      height: 320px;
+      margin-bottom: -40px;
+    }
+    @include lg{
+      height: 450px;
+    }
+    @include xl{
+      height: 500px;
+    }
+  }
+  > .uk-card {
+    max-width: 750px;
+    min-height: 500px;
+    margin: 0 auto;
+    background: $white;
+    h1 {
+      @include font-size($xl-font);
+      font-weight: bold;
+    }
+    h5 {
+      @include font-size($md-font);
+      color: $brand;
+      margin-top: 20px;
+    }
+    .tile-social-icons {
+      span {
+        @include font-size($sm-font);
+        color: $primary;
+      }
+    }
+    p {
+      @include font-size($sm-font);
+    }
+    .tile-user {
+      .tl-content {
+        margin: 0;
+        display: block;
+        @include md {
+          display: flex;
+        }
+        .uk-cover-container {
+          width: 110px;
+          height: 110px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          @include md {
+            margin: 0;
+          }
+        }
+        .tl-details {
+          text-align: center;
+          @include md {
+            text-align: left;
+          }
+          h4 {
+            @include font-size($lg-font);
+          }
+          h3 {
+            @include font-size($md-font);
+          }
+          p {
+            @include font-size($sm-font);
+          }
+        }
+        .tl-options {
+          @include md {
+            margin: 0;
+            text-align: left;
+            display: block;
+          }
+        }
+      }
+    }
+    .widget-tabs {
+      .wg-content {
+        .uk-slider {
+          background: none;
+          ul.uk-subnav {
+            background: none;
+            li {
+              a {
+                @include font-size($md-font);
+                max-width: none;
+              }
+            }
+          }
+        }
+        .uk-switcher {
+          padding: 20px;
+          dl.uk-description-list {
+            &.has-icons {
+              margin-left: 30px;
+            }
+            dt {
+              position: relative;
+              font-weight: bold;
+              text-transform: none;
+              @include font-size($md-font);
+              &:after {
+                content: ":";
+              }
+              .uk-icon {
+                position: absolute;
+                left: -30px;
+                top: 5px;
+              }
+            }
+            dd {
+              @include font-size($md-font);
+              font-weight: 100;
+              ul.uk-list {
+                margin: 0;
+                padding: 5px 0 0 0;
+                li {
+                  padding-top: 0;
+                  margin-top: 0;
+                  border: none;
+                }
+              }
+              table.uk-table {
+                width: auto;
+                thead {
+                  tr {
+                    th {
+                      color: $text;
+                      text-transform: none;
+                      @include font-size($md-font);
+                      padding: 0 15px 0 0;
+                    }
+                  }
+                }
+                tbody {
+                  tr {
+                    td {
+                      font-style: italic;
+                      font-weight: 100;
+                      padding: 0 15px 0 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

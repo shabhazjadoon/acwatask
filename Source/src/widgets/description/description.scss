@@ -1,0 +1,180 @@
+@import "../../base/_index";
+
+.widget-description {
+    .more-description{
+        margin-bottom: 30px;
+        @include sm{
+            display: flex;
+        }
+        @include md{
+            margin-bottom: 50px;
+        }
+        .profile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #F8E0D7;
+            padding: 15px;
+            @include sm{
+                align-items: flex-start;
+                text-align: start;
+            }
+            .uk-cover-container{
+                min-width: 160px;
+                width: 160px;
+                height: 180px;
+                margin-bottom: 8px;
+            }
+            label{
+                @include font-size($xs-font);
+                font-weight: bold;
+                &.name{
+                    color: $brand;
+                }
+            }
+        }
+        .details{
+            width: 100%;
+            @include sm{
+                width: calc(100% - 190px);
+            }
+            @include md{
+                display: flex;
+            }
+            .text{
+                padding: 20px;
+                @include md{
+                    padding: 20px 90px 20px 20px;
+                }
+                p{
+                    padding: 4px 0px;
+                }
+            }
+            .icons{
+                display: flex;
+                padding: 0px 20px;
+                @include md{
+                    flex-direction: column;
+                    padding: 0px;
+                }
+                .safety{    
+                    span{
+                        color: $value-red;
+                        &.uk-icon{
+                            color: $white;
+                            background-color: $value-red;
+                        }
+                    }
+                }
+                .people{
+                    span{
+                        color: $value-blue;
+                        &.uk-icon{
+                            color: $white;
+                            background-color: $value-blue;
+                        }
+                    }
+                }
+                .performance{
+                    span{
+                        color: $value-green;
+                        &.uk-icon{
+                            color: $white;
+                            background-color: $value-green;
+                        }
+                    }
+                }
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-right: 20px;
+                    @include md{
+                        margin-right: 0px;
+                        margin-bottom: 4px;
+                    }
+                    span{
+                        @include font-size($md-font);
+                        @include md{
+                            @include font-size($xs-font);
+                        }
+                        &.uk-icon{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 30px;
+                            height: 16px;
+                            padding: 15px;
+                            font-size: 60px;
+                            @include md{
+                                width: 45px;
+                                height: 40px;
+                            }
+                            svg{
+                                height: 30px;
+                                width: auto;
+                                @include md{
+                                    height: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .links-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 12px 6px;
+            background-color: $primary;
+            color: $white;
+            flex-grow: 1;
+            width: calc(50% - 20px);
+            height: 50px;;
+            margin-bottom: 12px;
+            border: 2px solid $primary;
+            transition: all 0.4s;
+            flex-grow: 0;
+            // @include sm{
+            //     width: calc(33.33333% - 20px);
+            //     padding: 20px 0px;
+            // }
+            @include sm{
+                height: 35px;
+            }
+            @include md{
+                
+                width: calc(20% - 20px);
+                padding: 20px 0px;
+            }
+            &:nth-child(even){
+                margin-left: 4px;
+            }
+            +a{
+                @include md{
+                    margin-left: 4px;
+                }
+            }
+            &:hover{
+                background: $white;
+                color: $primary;
+            }
+        }
+    }
+    p{
+        color: $grey;
+        @include font-size($md-font);
+        margin: 0;
+        padding: 20px 15px;
+        text-align: justify;
+    }
+}

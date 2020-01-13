@@ -1,0 +1,24 @@
+footer {
+  padding: 20px;
+  border-top: 1px solid $lighter-grey;
+  margin-top: 40px;
+  color: $text;
+  @include font-size($xxs-font);
+  text-transform: uppercase;
+  .uk-grid {
+    ul.uk-subnav {
+      li {
+        &.uk-active {
+          a{
+            color: darken($text, 5%);
+          }
+        }
+        a {
+          font-weight: normal;
+          @include font-size($xxs-font);
+          color: $text;
+        }
+      }
+    }
+  }
+}

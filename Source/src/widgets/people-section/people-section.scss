@@ -1,0 +1,148 @@
+@import "../../base/_index";
+
+.people-section{
+    @media screen and (max-width: 480px) {
+        display: grid;
+        order: 3;
+    }
+    @media screen and (max-width:  960px) {
+        display: grid;
+        order: 3;
+    }
+    .uk-grid-stack{
+        .widget-people-section {
+            .wg-wrapper{
+                padding: 0px;
+                .wg-content{
+                    position: relative;
+                    padding: 17px 0;
+                    @media screen and (max-width: 480px) {
+                        padding-bottom: 0px;
+                           
+                    }
+                    
+                    .title-people{
+                         margin-top: 0px;
+                        width: 100%;
+                        h3{
+                            color: #bd3632;
+                            // border-bottom: 2px solid #c14142;
+                            padding-bottom:  14px;
+                            width: 100%;
+                            padding-left: 57px;
+                            font-weight: bold;
+                        }
+                       
+                    }
+                    .gray-line{
+                        width: 100%;
+                        height: 2px;
+                        background-color: #f7f9ff;
+                        position: absolute;
+                        top: 67px;
+
+                    }
+                    .red-line{
+                        width: 31%;
+                        height: 2px;
+                        background-color: #c14440;
+                        position: absolute;
+                        top: 67px;
+                        z-index: 10;
+
+                    }
+                    .card-people{
+                        box-shadow:none;
+                        padding: 10px 30px;
+                        position: relative;
+                        .people-content {
+                            .uk-cover-container{
+                                box-shadow: none;
+                            }
+                            
+                            a{
+                                float: left;
+                            }
+                            .people-details{
+                                float: left;
+                                margin-left: 15px;
+                                a{
+                                    h3{
+                                        padding: 0px;
+                                        margin: 0px;
+                                        display: block;
+                                        font-weight: bold;
+                                        color:#444e58;
+                                        @include font-size($sm-font);
+                                    }
+                                    span{
+                                        padding: 0px;
+                                        margin: 0px;
+                                        display: block;
+                                        color:#444e58;
+                                        opacity: .8;
+                                    }
+                                }
+                            }
+                            .uk-cover-container{
+                                width: 100px;
+                                height: 100px;
+                                 overflow: hidden;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+
+                                @media screen and (max-width: 480px) {
+                                    width: 50px;
+                                    height: 50px;   
+                                }
+                                
+                            }
+                         }
+                        .follow{
+                            position: absolute;
+                            top: 65px;
+                            right: 20px;
+                            color: $brand;
+                            font-size: 17px;
+                            font-weight: bold;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            @media screen and (max-width: 480px) {
+                                top: 103px;;
+                                right: 20px;
+                            
+                                   
+                            }
+                            &.followed{
+                                color: $third;
+                                text-decoration: none;
+                                .uk-icon{
+                                    color: $third;
+                                }
+                            }
+                        }
+                        [uk-spinner]{
+                            position: absolute;
+                            top: 65px;
+                            right: 20px;
+                        }
+                        
+                    }
+                    .load-more{
+                        div{
+                            background-color: #ccc;
+                            height: 30px;
+                            width: 100%;
+                            text-align: center;
+                            padding: 10px 0px;
+                            color: #000;
+
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.tile-video {
+  .icon-container {
+    z-index: 1;
+    &:hover {
+      + .img-container {
+        &:after {
+          background: rgba($black, 0.05);
+        }
+        img {
+          opacity: 1;
+          @include transform(scale3d(1.1, 1.1, 1));
+        }
+      }
+    }
+    a {
+      border-radius: 50%;
+      @include transition(0.5s ease-in-out);
+      &.uk-icon {
+        color: $white;
+        svg {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      &:hover {
+        background: rgba($white, 0.2);
+      }
+    }
+  }
+  .img-container {
+    &:after {
+      @include transition(0.3s ease-in-out);
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba($black, 0.2);
+    }
+    img {
+      @include transition(0.3s ease-in-out);
+    }
+  }
+}

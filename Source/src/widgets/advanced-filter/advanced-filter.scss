@@ -1,0 +1,102 @@
+@import "../../base/_index";
+
+.widget-advanced-filter{
+    display: flex;
+    &.uk-active{
+        padding: 9px;
+        // background: rgb(238, 238, 238);
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px;
+    }
+    .wg-wrapper{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        >form{
+            // padding-right: 120px;
+        }
+        .open-filters{
+            margin-bottom: 15px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                outline: none;
+                padding: 0px 10px;
+                border: 1px solid $lighter-grey;
+                box-shadow: 0 2px 8px rgba(0,0,0,.08);
+                transition: all 0.5s;
+                @include font-size($md-font);
+                background: $white;
+                color: $grey;
+                cursor: pointer;
+                &.on{
+                    color: $white;
+                    background: $brand;
+                    border: unset;
+                }
+                .uk-icon{
+                    margin-left: 10px;
+                }
+        }
+        #toggle-filters{
+            @include md{
+                display: block !important;
+            }
+        }
+        .filter{
+            // position: absolute;
+            // top:0px;
+            // right: 0px;
+            // margin-top: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+            background: $white;
+            padding: 25px;
+            // button{
+            //     height: 40px;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     outline: none;
+            //     padding: 0px 10px;
+            //     border: 1px solid $lighter-grey;
+            //     width: 120px;
+            //     @include font-size($sm-font);
+            //     background: $white;
+            //     color: $grey;
+            //     cursor: pointer;
+            //     &.uk-open{
+            //         color: $white;
+            //         background: $brand;
+            //         border: unset;
+            //     }
+            //     .uk-icon{
+            //         margin-left: 10px;
+            //     }
+            // }
+            // .uk-dropdown{
+                // padding: 12px;
+                // @include sm{
+                //     padding: 25px;
+                // }
+                .tile-advanced-filter{
+                    // min-width:240px;
+                    // @include sm{
+                    //     min-width:620px;
+                    // }
+                    // @include xl{
+                    //     min-width:720px;
+                    // }
+                    // @media all and (-ms-high-contrast:none){//for ie 11
+                    //     width:240px;
+                    //     @include sm{
+                    //         width:620px;
+                    //     }
+                    //     @include xl{
+                    //         width:720px;
+                    //     }
+                    //}
+                }
+            // }
+        }
+    }
+}

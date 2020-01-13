@@ -1,0 +1,36 @@
+.tile-social-icons {
+  ul.uk-iconnav {
+    margin: 0;
+    li {
+      &:first-child{
+        padding: 0;
+      }
+      &.date{
+          margin-left: 15px;
+          line-height: 24px;
+      }
+      &.liked{
+        span.uk-icon{
+          color: $brand-hover;
+          path{
+            fill: $brand-hover;
+          }
+        }
+      }
+      span {
+        color: $white;
+        @include font-size($xs-font);
+      }
+      p{
+        margin: 0;
+      }
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        svg {
+          height: 16px;
+        }
+      }
+    }
+  }
+}

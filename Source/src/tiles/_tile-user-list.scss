@@ -1,0 +1,84 @@
+.tile-user-list {
+  p {
+    font-weight: bold;
+    @include font-size($md-font);
+    margin: 0;
+  }
+  ul.uk-list {
+    padding: 10px 0;
+    margin: 0;
+    li {
+      float: left;
+      margin: 5px 20px 10px 0;
+      width:100%;
+      @include sm{
+        width:46%;
+      }
+      @include md{
+        width:22%;
+      }
+      +li{
+        margin-top:5px;
+      }
+      &.more {
+        width: 100%;
+        .item-content {
+          label {
+            margin-left: 0;
+          }
+        }
+        .data-uk-spinner{
+          color: $brand;
+        }
+      }
+
+      .item-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .uk-cover-container {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        label {
+          margin-left: 10px;
+          flex: 1;
+          line-height: 30px;
+          color: $primary-light;
+          font-weight: bold;
+          vertical-align: middle;
+          cursor: inherit;
+          label {
+            @include font-size($sm-font);
+            .uk-icon {
+              color: $primary-light;
+            }
+          }
+        }
+        
+      }
+
+    }
+  }
+
+  &.tile-user-list-large{
+    ul.uk-list {
+      padding: 10px 0;
+      margin: 0;
+      li {
+        @include sm{
+          width:100%;
+        }
+        @include md{
+          width:45%;
+        }
+      }}
+  }
+}

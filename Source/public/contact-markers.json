@@ -1,0 +1,45 @@
+ {
+     "Locators": [{
+           "icon": "img/mapPin.png"
+         , "country": "Egypt"
+         , "countryId": 233
+         , "content": ""
+         , "coordinates": [29.924526 , 31.205753]
+     },
+     {
+        "icon": "img/mapPin.png"
+        , "country": "Oman"
+        , "countryId": 222
+        , "content": ""
+        , "coordinates": [58.545284 , 23.614327]
+    },
+    {
+        "icon": "img/mapPin.png"
+        , "country": "UAE"
+        , "countryId": 333
+        , "content": ""
+        , "coordinates": [55.296249 , 25.276987]
+    },
+    {
+        "icon": "img/mapPin.png"
+        , "country": "Turkey"
+        , "countryId": 534
+        , "content": ""
+        , "coordinates": [28.979530 , 41.015137]
+    },
+    {
+        "icon": "img/mapPin.png"
+        , "country": "Spain"
+        , "countryId": 654
+        , "content": ""
+        , "coordinates": [2.154007 , 41.390205]
+    },
+    {
+        "icon": "img/mapPin.png"
+        , "country": "China"
+        , "countryId": 247
+        , "content": ""
+        , "coordinates": [116.363625 , 39.913818]
+    }
+    ]
+ }

@@ -1,0 +1,10 @@
+@import "../../base/_index";
+.widget-project-details{
+    padding: 30px;
+    @include md{
+        padding: 40px;
+    }
+    .tile-overview{
+        margin-bottom: 20px;
+    }
+}

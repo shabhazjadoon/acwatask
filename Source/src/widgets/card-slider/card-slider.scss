@@ -1,0 +1,35 @@
+@import "../../base/_index";
+.widget-card-slider {
+
+  .wg-content {
+    ul.uk-slider-items { 
+      li {
+        padding-bottom: 30px; 
+        @include md {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .uk-dotnav {
+      margin-top: 0;
+      li {
+        a {
+          border: none;
+          background: rgba($primary,0.3);
+          width: 13px;
+          height: 13px;
+          @include md {
+            width: 16px;
+            height: 16px;
+          }
+        }
+        &.uk-active {
+          a {
+            background: $primary;
+          }
+        }
+      }
+    }
+  }
+}

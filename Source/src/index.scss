@@ -1,0 +1,269 @@
+@import "./base/index";
+@import "./tiles/index";
+@import "./components/buttons/buttons.scss";
+@import "./components/slimscroll/slimscroll.scss";
+@import "./components/section/section.scss";
+@import "./components/widget/widget.scss";
+@import "./components/header/header.scss";
+@import "./components/sidenav/sidenav.scss";
+@import "./components/footer/footer.scss";
+@import "./components/search/search.scss";
+@import "./components/event-indicator/event-indicator.scss";
+@import "./components/lightbox/lightbox.scss";
+@import "./components/print/print.scss";
+
+@import "./components/animations/animations.scss";
+@import "./widgets/twitter/twitter.scss";
+@import "./widgets/slider/slider.scss";
+@import "./widgets/alert/alert.scss";
+@import "./widgets/notifications/notifications.scss";
+@import "./widgets/list/list.scss";
+@import "./widgets/poll/poll.scss";
+@import "./widgets/card-slider/card-slider.scss";
+@import "./widgets/tabs/tabs.scss";
+@import "./widgets/weather/weather.scss";
+@import "./widgets/calendar/calendar.scss";
+@import "./widgets/values/values.scss";
+@import "./widgets/article/article.scss";
+@import "./widgets/page-cover/page-cover.scss";
+@import "./widgets/description/description.scss";
+@import "./widgets/accordion/accordion.scss";
+@import "./widgets/filters/filters.scss";
+@import "./widgets/404/404.scss";
+@import "./widgets/project-details/project-details.scss";
+@import "./widgets/swiper/swiper";
+@import "./widgets/map/map";
+@import "./widgets/advanced-filter/advanced-filter";
+@import "./widgets/sidebar-groups/sidebar-group.scss";
+@import "./widgets/people-section/people-section.scss";
+@import "./widgets/my-notification/my-notification.scss";
+@import "./widgets/people-right-sidebar/people-right-sidebar.scss";
+@import "./widgets/my-groups/my-groups.scss";
+@import "./widgets/yammer-feed/yammer-feed.scss";
+@import "./widgets/yammer-search/yammer-search.scss";
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $font;
+  background: $bg;
+  color: $text;
+  * {
+    font-family: $font;
+  }
+}
+
+body {
+ // opacity: 0;
+  @include transition(0.5s ease-in);
+  // &.loaded {
+  //   opacity: 1;
+  // }
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Extrabld.eot");
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Extrabld.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Extrabld.woff") format("woff"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Extrabld.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Black.eot");
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Black.woff") format("woff"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Black.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Bold.eot");
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Regular.eot");
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Light.eot");
+  src: url("./assets/fonts/ProximaNova/ProximaNova-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Light.woff") format("woff"),
+    url("./assets/fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+.uk-link,
+a {
+  color: $text;
+  text-decoration: none;
+  outline: none;
+  @include transition(0.3s ease-in-out);
+  &:hover {
+    color: $text;
+    text-decoration: none;
+  }
+}
+
+input.uk-input,
+textarea.uk-textarea {
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.page-header {
+  padding: 15px 0;
+  .page-heading {
+    @include font-size($lg-font);
+    font-weight: bold;
+    display: block;
+    margin: 20px 0;
+    &.default {
+      font-weight: normal;
+    }
+    &.large-heading {
+      @include font-size($xl-font);
+    }
+    .uk-icon {
+      margin-right: 5px;
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+.bg-primary {
+  background: $primary;
+  color: $white;
+  h1,
+  a,
+  .uk-icon {
+    color: $white;
+  }
+  .uk-button {
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.bg-third {
+  background: $third;
+  color: $white;
+  h1,
+  a,
+  .uk-icon {
+    color: $white;
+  }
+  .uk-button {
+    &:hover {
+      color: $third;
+    }
+  }
+}
+
+.bg-white {
+  background: $white;
+  color: $text;
+  h1,
+  a,
+  .uk-icon {
+    color: $text;
+  }
+}
+
+.bg-secondary {
+  background: $secondary;
+  color: $white;
+  h1,
+  a,
+  .uk-icon {
+    color: $white;
+  }
+  .uk-button {
+    &:hover {
+      color: lighten($color: $grey, $amount: 5%);
+    }
+  }
+}
+.uk-grid-divider > :not(.uk-first-column)::before {
+  opacity: 0.2;
+}
+
+.uk-drag {
+  .uk-sortable {
+    border: 1px dashed #999;
+  }
+}
+
+////////////////////
+// Edit Mode
+//////////
+.uk-sortable-empty {
+  min-height: initial;
+}
+.edit-on {
+  .widget {
+    opacity: 0.1;
+  }
+  .uk-sortable {
+    border: 1px dashed $active;
+    &.uk-sortable-empty {
+      min-height: 100px;
+    }
+    .widget {
+      opacity: 1;
+      .wg-handle {
+        display: block;
+      }
+    }
+  }
+}
+
+.uk-spinner{
+  color:$brand;
+}
+
+
+
+.blockeditor {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  vertical-align: middle;
+  padding: 0;
+}

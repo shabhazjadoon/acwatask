@@ -1,0 +1,35 @@
+@import "../../base/_index";
+.widget-alert {
+  background: $brand;
+  color: $white;
+  .wg-icon {
+    position: absolute;
+    background: $brand;
+    display: block;
+    z-index: 1;
+    height: 30px;
+    @include shadow(10px 0 10px  $brand);
+  }
+  .uk-alert-close {
+    display: block;
+    opacity: 1;
+    height: 30px;
+    background: $brand;
+    @include shadow(-10px 0 10px  $brand);
+    z-index: 1;
+  }
+  ul.uk-slider-items {
+    margin-left: 0px;
+    margin-right: 0px;
+    li {
+      //margin: 0 10px;
+      //padding-left: 30px;
+      a {
+        @include font-size($md-font);
+        text-decoration: none;
+        color: $white;
+
+      }
+    }
+  }
+}

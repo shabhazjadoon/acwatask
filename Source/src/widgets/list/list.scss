@@ -1,0 +1,83 @@
+@import "../../base/_index";
+
+.widget-list {
+  .wg-wrapper {
+    .wg-header {
+    }
+    .wg-content {
+      padding-top: 10px;
+      padding-bottom: 0;
+      @include md {
+        padding-top: 20px;
+      }
+      h2 {
+        @include font-size($md-font);
+        font-weight: bold;
+        margin-bottom: 10px;
+        @include md {
+          margin-bottom: 20px;
+        }
+      }
+      ul.uk-list {
+        margin: 0;
+        li {
+          + li {
+            padding-top: 10px;
+            margin-top: 10px;
+            border-top: 1px solid $lighter-grey;
+            @include md {
+              padding-top: 20px;
+              margin-top: 20px;
+            }
+          }
+
+          .item-content {
+            @include md {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+            .uk-cover-container {
+              @include md {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+            }
+
+            .item-details {
+              flex: 1;
+              @include md {
+                padding-left: 20px;
+              }
+
+              h3 {
+                @include font-size($md-font);
+                margin-bottom: 5px;
+                font-weight: bold;
+              }
+              p {
+                margin: 0;
+                label {
+                  @include font-size($sm-font);
+
+                  .highlight {
+                    color: $brand;
+                    font-weight: bold;
+                  }
+                  + label {
+                    margin-left: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

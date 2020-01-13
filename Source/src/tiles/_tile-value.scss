@@ -1,0 +1,51 @@
+.tile-value {
+  .tl-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //align-items: center;
+    background: darken($bg, 2%);
+    .uk-cover-container {
+      width: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.value-blue {
+        background-color: $value-blue;
+      }
+      &.value-red {
+        background-color: $value-red;
+      }
+      &.value-green {
+        background-color: $value-green;
+      }
+      @include md {
+        width: 100px;
+      }
+    }
+    .tl-details {
+      padding: 15px;
+      flex: 1;
+
+      h4 {
+        @include font-size($lg-font);
+        font-weight: bold;
+        margin: 0 0 5px 0;
+        &.value-blue {
+          color: $value-blue;
+        }
+        &.value-red {
+          color: $value-red;
+        }
+        &.value-green {
+          color: $value-green;
+        }
+      }
+      ul {
+        li {
+          @include font-size($md-font);
+        }
+      }
+    }
+  }
+}

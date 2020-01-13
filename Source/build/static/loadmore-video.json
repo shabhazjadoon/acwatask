@@ -1,0 +1,7 @@
+[
+    "<div class='uk-width-extend uk-width-1-2@m uk-width-1-4@l'> <section class='widget'> <div class='uk-inline'> <div class='tile-video' > <div class='uk-position-cover icon-container'> <a class='uk-position-center' uk-icon='icon: play-circle'  href='#modal-media-video2' uk-toggle ></a> <div id='modal-media-video2'  data-azure='//amssamples.streaming.mediaservices.windows.net/91492735-c523-432b-ba01-faba6c2206a2/AzureMediaServicesPromo.ism/manifest' class='uk-modal-container' uk-modal><div class='uk-modal-dialog uk-width-auto uk-margin-auto-vertical'><button class='uk-modal-close-outside' type='button' uk-close></button></div></div> </div> <div class='uk-inline-clip img-container'> <img src='static/media/dark.5624122c.jpg' alt=''> </div> </div> </div> </section> </div>"
+    ,
+    "load-more: true"
+]
+
+

@@ -1,0 +1,18 @@
+@import "../../base/_index";
+.widget-values {
+  .wg-content {
+    .tile-icon-data {
+      img{
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      h3,
+      p {
+        min-width: 0;
+        @include md {
+          @include font-size($xs-font);
+        }
+      }
+    }
+  }
+}

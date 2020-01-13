@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2018-02-15",
+    "title": "Title A",
+    "color": "pirmary",
+    "location": "new location",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "new event title"
+  },
+  {
+    "date": "2018-02-15",
+    "title": "Title A",
+    "color": "pirmary",
+    "location": "new location",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "http://www.event.com"
+  },
+  {
+    "date": "2018-02-12",
+    "title": "Title B",
+    "color": "pirmary",
+    "location": "location venue2",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "http://www.event.com"
+  },
+  {
+    "date": "2018-02-11",
+    "title": "Title C",
+    "color": "primary",
+    "location": "location venue",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "http://www.event.com"
+  },
+  {
+    "date": "2018-02-12",
+    "title": "Title C",
+    "color": "third",
+    "location": "location venue",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "http://www.event.com"
+  },
+  {
+    "date": "2018-02-12",
+    "title": "Title C",
+    "color": "third",
+    "location": "location venue",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "http://www.event.com"
+  },
+  {
+    "date": "2018-02-12",
+    "title": "Title C",
+    "color": "third",
+    "location": "location venue",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "http://www.event.com"
+  },
+  {
+    "date": "2018-02-15",
+    "title": "Title C",
+    "color": "pirmary",
+    "location": "location venue",
+    "time": "8:30PM - 9:30PM",
+    "imageURL": "static/media/city.jpg",
+    "url": "http://www.event.com"
+  }
+]

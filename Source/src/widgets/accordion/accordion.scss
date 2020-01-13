@@ -1,0 +1,15 @@
+@import "../../base/_index";
+
+.widget-accordion {
+  .uk-accordion-title {
+    background: darken($bg, 4%);
+    padding: 10px;
+    &:hover {
+      color: $brand;
+    }
+  }
+  .uk-accordion-content {
+    background: $white;
+    margin: 0;
+  }
+}

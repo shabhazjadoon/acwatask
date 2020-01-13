@@ -1,0 +1,76 @@
+.tile-filter {
+  width: 100%;
+  position: relative;
+  @include md {
+    width: auto;
+  }
+  
+
+  .uk-button {
+    border: none;
+    border-radius: 0;
+    color: $brand;
+    padding: 0;
+    border-bottom: 2px solid $brand;
+    background: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include md {
+      border-width: 3px;
+    }
+    .uk-icon {
+      @include transition(0.3s ease-in-out);
+      margin-left: 10px;
+    }
+
+    &.uk-open {
+      border-color: transparent;
+      .uk-icon {
+        @include transform(rotate(-180deg) !important);
+      }
+    }
+  }
+  .uk-dropdown {
+    margin-top: 0;
+    border-bottom: 3px solid $brand;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        margin-bottom: 5px;
+        input {
+          margin-right: 5px;
+        }
+        label {
+          @include font-size($xs-font);
+          font-weight: bold;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+.tile-filter-select{
+  
+  label
+  {
+    font-weight: bold;
+    @include font-size($md-font);
+  }
+  select{
+    min-width: 200px;
+    border:none;
+    border-bottom:2px solid $brand;
+    background:none;
+
+  }
+  button{
+    background:none;
+  }
+}

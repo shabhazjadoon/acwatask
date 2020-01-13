@@ -1,0 +1,125 @@
+@import "../../base/_index";
+
+ 
+.widget-tabs{
+    .wg-wrapper{
+        .wg-content{
+           padding-top: 0px;
+            .uk-position-relative{
+                .uk-slider-items{
+                    margin-bottom: 1px;
+                    background-color: #fff;
+                    li{
+                        background-color: #fff;
+
+                        @media screen and (max-width:  480px) {
+                           width: 50%;
+                         }
+                        a{
+                            font-weight: bold;
+                            padding:15px 19px 16px 23px !important;
+                            box-sizing: border-box;
+                            text-align: center;
+
+                        }
+                    }
+                    .active-tab{
+                         a{
+                            color:#c33a32;
+                            border-bottom: #c14440 solid 3px;
+                            box-sizing: border-box;
+                            
+                        }
+
+                    }
+                   
+                    
+                }
+                .uk-position-small{ display: none;}
+            }
+            .uk-switcher{
+                @media screen and (max-width:  480px) {
+                    padding: 0px;
+                  }
+                
+                li{
+                    .wg-content{
+                        .card-people{
+                            position: relative;
+                            padding: 10px;
+                        box-shadow: none;
+                        .people-content{
+                            a{
+                                float: left;
+                                .uk-cover-container{
+                                    width: 100px;
+                                    height: 100px;
+                                    float: left;
+                                    margin-right: 15px;
+                                    overflow: hidden;
+                                    background-size: cover;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    box-shadow: 0 5px 4px rgba(0,0,0,.16);
+                                    @media screen and (max-width:  480px) {
+                                        width: 60px;
+                                        height: 60px;
+                                      }
+                                }
+                            }
+                            .people-details{
+                                float: left;
+                                a{
+                                    h3{
+                                        margin-bottom: 2px;
+                                        margin-top: 18px;
+                                        @media screen and (max-width:  480px) {
+                                            font-size: 16px;
+                                            font-weight: bold;
+                                            margin-top: 7px;
+                                          }
+
+                                    }
+                                    span{
+                                        @media screen and (max-width:  480px) {
+                                            font-size: 12px;
+                                          }
+
+                                    }
+                                }
+                            }
+                        }
+                        .follow{
+                            position: absolute;
+                            top: 40px;
+                            right: 10px;
+                            font-weight: bold;
+                            color: #c33a32;
+                            text-decoration: underline;
+                            @media screen and (max-width:  480px) {
+                                top: 35px;
+                                right: 20px;
+                            }
+                            
+                            &.followed{
+                                color: $third;
+                                text-decoration: none;
+                                .uk-icon{
+                                    color: $third;
+                                }
+                            }
+                        }
+                        [uk-spinner]{
+                            position: absolute;
+                            top: 48px;
+                            right: 10px;
+                        }
+                       }
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+ 

@@ -1,0 +1,31 @@
+@import "../../base/index";
+.sc-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  .sc-heading {
+    @include font-size($lg-font);
+    font-weight: bold;
+    display: block;
+    margin: 0;
+    &:only-child {
+      @include md {
+        line-height: 40px;
+      }
+    }
+  }
+  .sc-options{
+    .uk-icon{
+      &:hover{
+        color: $brand-hover;
+      }
+      +.uk-icon{
+        margin-left: 8px;
+      }
+    }
+  }
+}
+// .sc-footer {
+// }

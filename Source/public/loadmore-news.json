@@ -1,0 +1,10 @@
+
+    [
+        "<div class='uk-width-extend uk-width-1-2@m uk-width-1-4@l'><section class='widget'><div class='tile-news'><div class='tl-wrapper'><div class='uk-background-cover uk-padding-small' style='background-image: url(static/media/dark.5624122c.jpg);'><div class='tl-content uk-position-bottom'><div class='tile-subscribe'><a class='subscribe subscribe-status' data-id='1' data-api='subscribe.json' ><span uk-icon='icon: bell' class='subscribe-icon'></span><span class='uk-label'>hr announcements</span></a></div><h1 class='uk-margin-remove-top'>Morroco minister of energy</h1><div class='tile-social-icons'><ul class='uk-iconnav'><li><a class='like-status' data-api='news.json'><span class='uk-icon' uk-icon='icon: heart'></span><span class='uk-text-middle'>123</span></a></li><li><a href='#'><span class='uk-icon' uk-icon='icon: comment'></span><span class='uk-text-middle'>64</span></a></li><li class='date'><span class='uk-text-middle'>12/21/2017</span></li></ul></div></div></div></div></div></section></div>"
+        ,
+        "<div class='uk-width-extend uk-width-1-2@m uk-width-1-4@l'><section class='widget'><div class='tile-news'><div class='tl-wrapper'><div class='uk-background-cover uk-padding-small' style='background-image: url(static/media/dark.5624122c.jpg);'><div class='tl-content uk-position-bottom'><div class='tile-subscribe'><a class='subscribe subscribe-status' data-id='1' data-api='subscribe.json' ><span uk-icon='icon: bell' class='subscribe-icon'></span><span class='uk-label'>hr announcements</span></a></div><h1 class='uk-margin-remove-top'>Morroco minister of energy</h1><div class='tile-social-icons'><ul class='uk-iconnav'><li><a class='like-status' data-api='news.json'><span class='uk-icon' uk-icon='icon: heart'></span><span class='uk-text-middle'>123</span></a></li><li><a href='#'><span class='uk-icon' uk-icon='icon: comment'></span><span class='uk-text-middle'>64</span></a></li><li class='date'><span class='uk-text-middle'>12/21/2017</span></li></ul></div></div></div></div></div></section></div>"
+        ,
+        "load-more: false"
+    ]
+
+       

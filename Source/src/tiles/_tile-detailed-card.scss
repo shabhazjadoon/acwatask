@@ -1,0 +1,24 @@
+.tile-detailed-card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .tl-content{
+        padding: 20px 30px;
+        h3{
+            font-weight: bold;
+            @include font-size($md-font);
+            margin: 0px;
+        }
+        label{
+            @include font-size($xs-font);
+        }
+        p{
+            margin: 12px 0px 10px;
+            @include font-size($xs-font);
+        }
+    }
+    .tl-footer{
+        padding: 0px 30px 30px;
+
+    }
+}

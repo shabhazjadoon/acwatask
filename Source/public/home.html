@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <!-- <link href="/static/css/main.css" rel="stylesheet"> -->
+  <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>ACWA Power - Home</title>
+</head>
+
+<body style="opacity:0">
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <header>
+    <div class="main-nav uk-box-shadow-medium" uk-sticky="media: (max-width: 1199px)">
+      <div class="uk-container uk-container-large">
+        <nav uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="#">
+              <img src="static/acwa_power.svg" alt="">
+            </a>
+            <div class="uk-navbar-item search uk-visible@l">
+              <form action="javascript:void(0)">
+                <div class="uk-inline">
+                  <span class="uk-form-icon" uk-icon="icon: search"></span>
+                  <input class="uk-input uk-form-width-small uk-box-shadow-small" type="search" placeholder="Search for contents and people">
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="uk-navbar-right ">
+            <div class="actions">
+              <a href="#" uk-icon="icon: search" class="uk-hidden@l" uk-toggle="target: #mobile-search; animation:  uk-animation-slide-left, uk-animation-slide-bottom"></a>
+              <a href="#" class="uk-visible@l">
+                <span class="uk-text-middle">Hello, Jon</span>
+                <img class="uk-border-circle" src="static/media/profile.jpg" />
+              </a>
+              <!-- <a href="#" uk-icon="icon: bell">
+                <span class="notification">22</span>
+              </a> -->
+              <button class="notify-btn" type="button" uk-icon="icon: bell">
+                <span class="notification">22</span>
+              </button>
+              <div uk-dropdown="mode: click;pos: top-right">
+                <a class="mark-asread-btn" data-api="mark-asread.json"><span uk-icon="icon: check"></span>mark all as
+                  read</a>
+                <ul class="uk-list slimscroll">
+                  <li class="unread">
+                    <div class="tile-notification-item">
+                      <div class="item-details">
+                        <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                          <h3>
+                            <span uk-icon="icon: users"></span>Communities</h3>
+                          <p>
+                            <b>Tom harry</b> joined your
+                            <b>fitness</b> group</p>
+                          <label>5 hours ago</label>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="tile-notification-item">
+                      <div class="item-details">
+                        <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                          <h3>
+                            <span uk-icon="icon: users"></span>Communities</h3>
+                          <p>
+                            <b>Tom harry</b> joined your
+                            <b>fitness</b> group</p>
+                          <label>5 hours ago</label>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tile-notification-item">
+                      <div class="item-details">
+                        <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                          <h3>
+                            <span uk-icon="icon: users"></span>Communities</h3>
+                          <p>
+                            <b>Tom harry</b> joined your
+                            <b>fitness</b> group</p>
+                          <label>5 hours ago</label>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="tile-notification-item">
+                      <div class="item-details">
+                        <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                          <h3>
+                            <span uk-icon="icon: users"></span>Communities</h3>
+                          <p>
+                            <b>Tom harry</b> joined your
+                            <b>fitness</b> group</p>
+                          <label>5 hours ago</label>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tile-notification-item">
+                      <div class="item-details">
+                        <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                          <h3>
+                            <span uk-icon="icon: users"></span>Communities</h3>
+                          <p>
+                            <b>Tom harry</b> joined your
+                            <b>fitness</b> group</p>
+                          <label>5 hours ago</label>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <a class="see-all" href="#"><span uk-icon="icon: check"></span>see all</a>
+              </div>
+              <ul class="uk-hidden@m blockeditor">
+                  <li>
+                      <a class="page-select-section" href="#"> 
+                          <span uk-icon="icon:  pencil"></span>
+                        </a> 
+                      <div uk-dropdown>
+                          <ul class="uk-nav uk-dropdown-nav">
+                              <div class="SecSelection">
+                                  <label><input class="uk-checkbox" name="" type="checkbox" disabled="" checked=""> Main Slider</label><br>
+                                  <label><input class="uk-checkbox" name="" type="checkbox"  disabled="" checked=""> News</label><br>
+                                  <label><input class="uk-checkbox Sec-Fourms"  name="SectionSelector[1]" value="Sec-Fourms" type="checkbox" checked=""> Fourms</label><br> 
+                                  <label><input class="uk-checkbox Sec-IndNews"  name="SectionSelector[2]" value="Sec-IndNews" type="checkbox" checked=""> Industry News</label><br>
+                                  <label><input class="uk-checkbox Sec-Workspace" name="SectionSelector[3]"  value="Sec-Workspace" type="checkbox" checked=""> HR Workspace</label><br> 
+                                  <label><input class="uk-checkbox Sec-Notifications" name="SectionSelector[4]"  value="Sec-Notifications" type="checkbox" checked=""> My notifications</label><br> 
+                                  <label><input class="uk-checkbox Sec-Events" name="SectionSelector[5]"  value="Sec-Events" type="checkbox" checked=""> Events</label><br> 
+                                  <label><input class="uk-checkbox Sec-Offers" name="SectionSelector[6]"  value="Sec-Offers" type="checkbox" checked=""> Offers and Promotions</label><br> 
+                                  <label><input class="uk-checkbox Sec-Poll"  name="SectionSelector[7]" value="Sec-Poll" type="checkbox" checked=""> Poll</label><br>   
+                              </div>
+                          </ul>
+                      </div>
+                    
+                  </li>
+              </ul>
+              <a href="#" class="uk-hidden@l mobile-toggler" uk-icon="icon: menu" uk-toggle="target: #mobile-nav"></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="mobile-search" class="uk-hidden@l" hidden>
+        <form class="search">
+          <div class="uk-inline uk-width-1-1">
+            <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+            <input class="uk-input" type="search" placeholder="Search Department">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="secondary-nav uk-visible@l uk-box-shadow-medium" uk-sticky>
+      <div class="uk-container uk-container-large">
+        <nav uk-navbar>
+          <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+              <li>
+                <a href="#" uk-icon="icon: home"></a>
+              </li>
+              <li class="uk-active">
+                <a href="#">
+                  <span uk-icon="icon: world"></span> News
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li class="uk-nav-header">News</li>
+                    <li><a><span uk-icon="icon: chevron-right"></span>Internal</a></li>
+                    <li><a><span uk-icon="icon: chevron-right"></span>External</a></li>
+                    <li class="sub-parent">
+                      <a>
+                        Countries
+                        <span uk-icon="icon: chevron-down"></span>
+                      </a>
+                      <div uk-dropdown>
+                        <ul class="uk-list list-width-2">
+                          <li><a>Bulgaria</a></li>
+                          <li><a>China</a></li>
+                          <li><a>Egypt</a></li>
+                          <li><a>Jordan</a></li>
+                          <li><a>KSA</a></li>
+                          <li><a>Morocco</a></li>
+                          <li><a>Oman</a></li>
+                          <li><a>South Africa</a></li>
+                          <li><a>Spain</a></li>
+                          <li><a>Turkey </a></li>
+                          <li><a>UAE</a></li>
+                          <li><a>Vietnam</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="uk-nav-divider"></li>
+                    <li>
+                      <a href="#"><span uk-icon="icon: chevron-right"></span>Events</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: user"></span> Resources
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li class="uk-active">
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Active</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Item</a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Item</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Item</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: users"></span> People</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: social"></span> Departments
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <div class="uk-navbar-dropdown uk-navbar-dropdown-width-3">
+                  <div class="uk-navbar-dropdown-grid uk-child-width-1-3" uk-grid>
+                    <div>
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active">
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Active</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active">
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Active</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active">
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Active</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span uk-icon="icon: chevron-right"></span>Item</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: ap_lightbulb"></span> Learning
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li class="uk-active">
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Active</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Item</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Item</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Item</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="icon: chevron-right"></span>Item</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: comments"></span> Forums</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: ap_portfolio;"></span> Portfolio</a>
+              </li>
+            </ul>
+
+
+          </div>
+          <div class="uk-navbar-right">
+
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a class="page-select-section" href="#">
+                        <span>Select Sections</span>
+                        <span uk-icon="icon:  pencil"></span>
+                      </a>
+                     
+                    <div uk-dropdown>
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <div class="SecSelection">
+                                <label><input class="uk-checkbox" name="" type="checkbox" disabled="" checked=""> Main Slider</label><br>
+                                <label><input class="uk-checkbox" name="" type="checkbox"  disabled="" checked=""> News</label><br>
+                                <label><input class="uk-checkbox Sec-Fourms"  name="SectionSelector[1]" value="Sec-Fourms" type="checkbox" checked=""> Fourms</label><br> 
+                                <label><input class="uk-checkbox Sec-IndNews"  name="SectionSelector[2]" value="Sec-IndNews" type="checkbox" checked=""> Industry News</label><br>
+                                <label><input class="uk-checkbox Sec-Workspace" name="SectionSelector[3]"  value="Sec-Workspace" type="checkbox" checked=""> HR Workspace</label><br> 
+                                <label><input class="uk-checkbox Sec-Notifications" name="SectionSelector[4]"  value="Sec-Notifications" type="checkbox" checked=""> My notifications</label><br> 
+                                <label><input class="uk-checkbox Sec-Events" name="SectionSelector[5]"  value="Sec-Events" type="checkbox" checked=""> Events</label><br> 
+                                <label><input class="uk-checkbox Sec-Offers" name="SectionSelector[6]"  value="Sec-Offers" type="checkbox" checked=""> Offers and Promotions</label><br> 
+                                <label><input class="uk-checkbox Sec-Poll"  name="SectionSelector[7]" value="Sec-Poll" type="checkbox" checked=""> Poll</label><br>   
+                            </div>
+                        </ul>
+                    </div>
+                  
+                </li>
+              <li>
+                <a class="page-edit-switch" href="#">
+                  <span>Edit</span>
+                  <span uk-icon="icon:  pencil"></span>
+                </a>
+              </li>
+            
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div id="mobile-nav" uk-offcanvas mode="slide" overlay>
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <div class="uk-offcanvas-bar">
+        <div class="uk-child-width-1-1" uk-grid>
+          <div>
+            <nav class="uk-margin-small" uk-navbar>
+              <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" href="#">
+                  <img src="static/acwa_power.svg" alt="">
+                </a>
+              </div>
+            </nav>
+            <div class="uk-padding-small">
+              <form class="search">
+                <div class="uk-margin-small">
+                  <div class="uk-inline uk-width-1-1">
+                    <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+                    <input class="uk-input" type="search" placeholder="Search">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="profile uk-padding-small uk-padding-remove-vertical">
+              <a href="#">
+                <img class="uk-border-circle" src="static/media/profile.jpg" />
+                <span class="uk-text-middle">Hello, Jon</span>
+              </a>
+            </div>
+
+            <ul class="uk-nav-primary uk-nav-parent-icon first-level" uk-nav>
+              <li class="uk-active">
+                <a href="http://www.google.ae">
+                  <span uk-icon="icon: home"></span> Home
+                </a>
+              </li>
+              <li class="uk-parent">
+                <a href="#">
+                  <span uk-icon="icon: world"></span> News
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <ul class="uk-nav-sub">
+                  <li class="uk-nav-header">News</li>
+                  <li><a>Internal</a></li>
+                  <li><a>External</a></li>
+                  <li class="sub-parent">
+                    <a>
+                      Countries
+                      <span uk-icon="icon: chevron-down"></span>
+                    </a>
+                    <div uk-dropdown="mode: click">
+                      <ul class="uk-list">
+                        <li><a>Bulgaria</a></li>
+                        <li><a>China</a></li>
+                        <li><a>Egypt</a></li>
+                        <li><a>Jordan</a></li>
+                        <li><a>KSA</a></li>
+                        <li><a>Morocco</a></li>
+                        <li><a>Oman</a></li>
+                        <li><a>South Africa</a></li>
+                        <li><a>Spain</a></li>
+                        <li><a>Turkey </a></li>
+                        <li><a>UAE</a></li>
+                        <li><a>Vietnam</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="uk-nav-divider"></li>
+                  <li>
+                    <a href="#">Events</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="uk-parent">
+                <a href="#">
+                  <span uk-icon="icon: user"></span> Resources
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <ul class="uk-nav-sub">
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: users"></span> People
+                </a>
+              </li>
+              <li class="uk-parent">
+                <a href="#">
+                  <span uk-icon="icon: social"></span> Departments
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <ul class="uk-nav-sub">
+                  <li>
+                    <form class="search">
+                      <div class="uk-margin-small">
+                        <div class="uk-inline uk-width-1-1">
+                          <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+                          <input class="uk-input" type="search" placeholder="Search Department">
+                        </div>
+                      </div>
+                    </form>
+                  </li>
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="uk-parent">
+                <a href="#">
+                  <span uk-icon="icon: question"></span> Learning
+                  <span uk-icon="icon: chevron-down"></span>
+                </a>
+                <ul class="uk-nav-sub">
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub item</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: comments"></span> Forums
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span uk-icon="icon: ap_portfolio;"></span> Portfolio
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="uk-container uk-container-large">
+    <div class="page-header">
+      <!-- Start placeholder -->
+      <div class="uk-grid-match uk-grid-small" uk-grid>
+        <div class="uk-width-1-1">
+          <section class="widget widget-alert" uk-alert>
+            <span class="wg-icon" uk-icon="icon:  rss"></span>
+            <a class="uk-alert-close" uk-close></a>
+            <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="autoplay:true;  pause-on-hover:true; autoplay-interval:5000; velocity: .2">
+              <ul class="uk-slider-items uk-grid uk-child-width-extend">
+
+                <li>
+                  <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.3 </a>
+                </li>
+                <li>
+                  <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.4 </a>
+                </li>
+                <li>
+                  <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.5 </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- End placeholder -->
+    </div>
+
+    <div class="page-content">
+      <!-- start section -->
+      <div class="uk-grid-match uk-grid-small" uk-grid>
+        <div class="uk-width-extend uk-width-2-3@l">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small" uk-grid>
+            <section class="widget widget-slider">
+              <div class="uk-height-1-1" uk-slideshow="autoplay:true; animation: push; pause-on-hover:true;">
+                <div class="uk-position-relative uk-visible-toggle uk-light uk-height-1-1">
+                  <ul class="uk-slideshow-items">
+
+                    <li>
+                      <img src="static/media/dark.5624122c.jpg" alt="" uk-cover>
+                      <div class="uk-position-bottom uk-transition-slide-bottom uk-margin-left uk-margin-right uk-margin-large-bottom">
+                        <div class="slide-details">
+                          <div class="tile-subscribe">
+                            <a class="subscribe" href="#">
+                              <span uk-icon="icon: bell" class="subscribe-icon"></span>
+                              <span class="uk-label">hr announcements</span>
+                            </a>
+                          </div>
+                          <a href="#">
+                            <div class="tile-padded-multiline">
+                              <h1 class="uk-margin-remove-top"><span>South Africa’s Bokpoort CSP celebrates another
+                                  Production Miles</span></h1>
+                            </div>
+                          </a>
+                          <div class="tile-social-icons">
+                            <ul class="uk-iconnav">
+                              <li class="liked">
+                                <p>
+                                  <span class="uk-icon" uk-icon="icon: heart"></span>
+                                  <span class="uk-text-middle">123</span>
+
+                                </p>
+
+
+                              </li>
+                              <li>
+                                <p>
+                                  <span class="uk-icon" uk-icon="icon: comment"></span>
+                                  <span class="uk-text-middle">64</span>
+                                </p>
+
+                              </li>
+
+                            </ul>
+                          </div>
+                        </div>
+
+                      </div>
+                    </li>
+
+
+                  </ul>
+                  <a class="uk-position-center-left uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                  <a class="uk-position-center-right uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                  <div class="uk-position-bottom-left uk-position-small uk-margin-left  uk-margin-bottom">
+                    <ul class="uk-dotnav uk-flex-left">
+                      <li uk-slideshow-item="0">
+                        <a href="#">Item 1</a>
+                      </li>
+                      <li uk-slideshow-item="1">
+                        <a href="#">Item 2</a>
+                      </li>
+                      <li uk-slideshow-item="2">
+                        <a href="#">Item 3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="uk-width-extend uk-width-1-3@l">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small" uk-grid>
+            <!-- Start Weather Widget -->
+            <section class="widget widget-weather" data-locations="Dubai,Cairo,Rabat,Istanbul,Hanoi,Madrid"
+              data-country="292223,360630,2538475,745044,1581130,3117735" data-dropAlpha="img/drop-alpha.png"
+              data-dropColor="img/drop-color.png" data-default="Dubai">
+              <div class="wg-wrapper">
+
+                <div class="slideshow">
+                  <canvas class="weather-canvas" style="position:absolute"></canvas>
+
+                  <div class="slide" id="slide-1" data-offset="+4" data-weather="dubai" data-background="public/img/weather/dubai/clear.png"
+                    data-background-storm="public/img/weather/dubai/storm.png" data-background-fog="public/img/weather/dubai/fog.png"
+                    data-background-rain="public/img/weather/dubai/rain.png" data-background-hot="public/img/weather/dubai/hot.png"
+                    data-background-cloud="">
+                    <div class="slide-content">
+                      <div class="slide__element slide__element--date">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="slide__element slide__element--temp">
+                        <span></span>
+                        <small>C</small>
+                      </div>
+                      <div class="slide__element slide__element--condition">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide" id="slide-2" data-offset="+2" data-weather="cairo" data-background="public/img/weather/cairo/clear.png"
+                    data-background-storm="public/img/weather/cairo/storm.png" data-background-fog="public/img/weather/cairo/fog.png"
+                    data-background-rain="public/img/weather/cairo/rain.png" data-background-hot="public/img/weather/cairo/hot.png"
+                    data-background-cloud="">
+                    <div class="slide-content">
+                      <div class="slide__element slide__element--date">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="slide__element slide__element--temp">
+                        <span></span>
+                        <small>C</small>
+                      </div>
+                      <div class="slide__element slide__element--condition">
+                        <span></span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="slide" id="slide-3" data-offset="+1" data-weather="rabat" data-background="public/img/weather/Rabat/clear.png"
+                    data-background-storm="public/img/weather/Rabat/storm.png" data-background-fog="public/img/weather/Rabat/fog.png"
+                    data-background-rain="public/img/weather/Rabat/rain.png" data-background-hot="public/img/weather/Rabat/hot.png"
+                    data-background-cloud="">
+                    <div class="slide-content">
+                      <div class="slide__element slide__element--date">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="slide__element slide__element--temp">
+                        <span></span>
+                        <small>C</small>
+                      </div>
+                      <div class="slide__element slide__element--condition">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide" id="slide-4" data-offset="+2" data-weather="istanbul" data-background="public/img/weather/Istanbul/clear.png"
+                    data-background-storm="public/img/weather/Istanbul/storm.png" data-background-fog="public/img/weather/Istanbul/fog.png"
+                    data-background-rain="public/img/weather/Istanbul/rain.png" data-background-hot="public/img/weather/Istanbul/hot.png"
+                    data-background-cloud="">
+                    <div class="slide-content">
+                      <div class="slide__element slide__element--date">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="slide__element slide__element--temp">
+                        <span></span>
+                        <small>C</small>
+                      </div>
+                      <div class="slide__element slide__element--condition">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide" id="slide-5" data-offset="+7" data-weather="hanoi" data-background="public/img/weather/Hanoi/clear.png"
+                    data-background-storm="public/img/weather/Hanoi/storm.png" data-background-fog="public/img/weather/Hanoi/fog.png"
+                    data-background-rain="public/img/weather/Hanoi/rain.png" data-background-hot="public/img/weather/Hanoi/hot.png"
+                    data-background-cloud="">
+                    <div class="slide-content">
+                      <div class="slide__element slide__element--date">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="slide__element slide__element--temp">
+                        <span></span>
+                        <small>C</small>
+                      </div>
+                      <div class="slide__element slide__element--condition">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide" id="slide-6" data-offset="-2" data-weather="madrid" data-background="public/img/weather/Madrid/clear.png"
+                    data-background-storm="public/img/weather/Madrid/storm.png" data-background-fog="public/img/weather/Madrid/fog.png"
+                    data-background-rain="public/img/weather/Madrid/rain.png" data-background-hot="public/img/weather/Madrid/hot.png"
+                    data-background-cloud="">
+                    <div class="slide-content">
+                      <div class="slide__element slide__element--date">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="slide__element slide__element--temp">
+                        <span></span>
+                        <small>C</small>
+                      </div>
+                      <div class="slide__element slide__element--condition">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div uk-slider="center: true">
+                    <ul class="slideshow__nav uk-slider-items uk-child-width-1-3">
+                      <li>
+                        <a class="nav-item" href="#slide-1" data-value="Dubai">
+                          <span>Dubai</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="nav-item" href="#slide-3" data-value="Rabat">
+                          <span>Rabat</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="nav-item" href="#slide-4" data-value="Istanbul">
+                          <span>Istanbul</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="nav-item" href="#slide-5" data-value="Hanoi">
+                          <span>Hanoi</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="nav-item" href="#slide-6" data-value="Madrid">
+                          <span>Madrid</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="nav-item" href="#slide-2" data-value="Cairo">
+                          <span>Cairo</span>
+                        </a>
+                      </li>
+
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large" href="#"
+                      uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" href="#"
+                      uk-slidenav-next uk-slider-item="next"></a>
+
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </section>
+            <!-- END Weater Widget -->
+
+
+            <!-- Our Values Widget -->
+
+            <section class="widget widget-values">
+              <div class="wg-wrapper uk-padding bg-third">
+                <div class="wg-header">
+                  <h1>Our values</h1>
+                  <span class="wg-options">
+                    <a class="uk-button btn-white" href="#">view all</a>
+                  </span>
+                </div>
+                <div class="wg-content">
+                  <div class="uk-grid-small uk-grid-divider uk-child-width-expand@s" uk-grid>
+                    <div>
+                      <div class="tile-icon-data">
+                        <a href="#">
+                          <span uk-icon="icon: ap_values_safety; ratio: 2"></span>
+                          <!-- <img src="static/values/ACWA-Core-Values-safety-red-reversed.png" /> -->
+                        </a>
+                        <h3>
+                          <a href="#">Safety</a>
+                        </h3>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="tile-icon-data">
+                        <a href="#">
+                          <span uk-icon="icon: ap_values_people; ratio: 2"></span>
+                        </a>
+                        <h3>
+                          <a href="#">People</a>
+                        </h3>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="tile-icon-data">
+                        <a href="#">
+                          <span uk-icon="icon: ap_values_performance; ratio: 2"></span>
+                        </a>
+                        <h3>
+                          <a href="#">Performance</a>
+                        </h3>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wg-footer uk-hidden@m">
+                  <a class="uk-button btn-white" href="#">view all</a>
+                </div>
+              </div>
+            </section>
+            <!-- /Our Values END -->
+          </div>
+
+        </div>
+      </div>
+      <!-- END section -->
+
+      <!-- Start uk-section -->
+      <div class="uk-grid-match uk-grid-small" uk-grid>
+        <div class="uk-width-extend uk-width-1-2@m uk-width-1-4@l">
+          <section class="widget widget-news-cover">
+            <div class="wg-wrapper">
+
+              <div class="tile-news">
+                <div class="tl-wrapper">
+                  <div class="uk-background-cover uk-padding-small" style="background-image: url(static/media/dark.5624122c.jpg);">
+                    <div class="tl-content uk-position-bottom">
+                      <div class="tile-subscribe">
+                        <a class="subscribe" href="#">
+                          <span uk-icon="icon: bell" class="subscribe-icon"></span>
+                          <span class="uk-label">hr announcements</span>
+                        </a>
+                      </div>
+                      <div class="tile-padded-multiline">
+                        <h1 class="uk-margin-remove-top"><span>Morroco minister of energy</span></h1>
+                      </div>
+                      <div class="tile-social-icons">
+                        <ul class="uk-iconnav">
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: heart"></span>
+                              <span class="uk-text-middle">123</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: comment"></span>
+                              <span class="uk-text-middle">64</span>
+                            </a>
+                          </li>
+                          <li class="date">
+                            <span class="uk-text-middle">12/21/2017</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="uk-width-extend uk-width-1-2@m uk-width-1-4@l">
+          <section class="widget widget-news-cover">
+            <div class="wg-wrapper">
+
+              <div class="tile-news">
+                <div class="tl-wrapper">
+                  <div class="uk-background-cover uk-padding-small" style="background-image: url(static/media/dark.5624122c.jpg);">
+                    <div class="tl-content uk-position-bottom">
+                      <div class="tile-subscribe">
+                        <a class="subscribe" href="#">
+                          <span uk-icon="icon: bell" class="subscribe-icon"></span>
+                          <span class="uk-label">hr announcements</span>
+                        </a>
+                      </div>
+                      <div class="tile-padded-multiline">
+                        <h1 class="uk-margin-remove-top"><span>Morroco minister of energy</span></h1>
+                      </div>
+                      <div class="tile-social-icons">
+                        <ul class="uk-iconnav">
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: heart"></span>
+                              <span class="uk-text-middle">123</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: comment"></span>
+                              <span class="uk-text-middle">64</span>
+                            </a>
+                          </li>
+                          <li class="date">
+                            <span class="uk-text-middle">12/21/2017</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="uk-width-extend uk-width-1-2@m uk-width-1-4@l">
+          <section class="widget widget-news-cover">
+            <div class="wg-wrapper">
+              <div class="tile-news">
+                <div class="tl-wrapper">
+                  <div class="uk-background-cover uk-padding-small" style="background-image: url(static/media/dark.5624122c.jpg);">
+                    <div class="tl-content uk-position-bottom">
+                      <div class="tile-subscribe">
+                        <a class="subscribe" href="#">
+                          <span uk-icon="icon: bell" class="subscribe-icon"></span>
+                          <span class="uk-label">hr announcements</span>
+                        </a>
+                      </div>
+                      <div class="tile-padded-multiline">
+                        <h1 class="uk-margin-remove-top"><span>Morroco minister of energy</span></h1>
+                      </div>
+                      <div class="tile-social-icons">
+                        <ul class="uk-iconnav">
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: heart"></span>
+                              <span class="uk-text-middle">123</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: comment"></span>
+                              <span class="uk-text-middle">64</span>
+                            </a>
+                          </li>
+                          <li class="date">
+                            <span class="uk-text-middle">12/21/2017</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="uk-width-extend uk-width-1-2@m uk-width-1-4@l">
+          <section class="widget widget-news-cover">
+            <div class="wg-wrapper">
+
+              <div class="tile-news">
+                <div class="tl-wrapper">
+                  <div class="uk-background-cover uk-padding-small" style="background-image: url(static/media/dark.5624122c.jpg);">
+                    <div class="tl-content uk-position-bottom">
+                      <div class="tile-subscribe">
+                        <a class="subscribe" href="#">
+                          <span uk-icon="icon: bell" class="subscribe-icon"></span>
+                          <span class="uk-label">hr announcements</span>
+                        </a>
+                      </div>
+                      <div class="tile-padded-multiline">
+                        <h1 class="uk-margin-remove-top"><span>Morroco minister of energy</span></h1>
+                      </div>
+                      <div class="tile-social-icons">
+                        <ul class="uk-iconnav">
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: heart"></span>
+                              <span class="uk-text-middle">123</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span class="uk-icon" uk-icon="icon: comment"></span>
+                              <span class="uk-text-middle">64</span>
+                            </a>
+                          </li>
+                          <li class="date">
+                            <span class="uk-text-middle">12/21/2017</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </section>
+        </div>
+        <div class="uk-width-extend">
+          <div class="uk-text-center">
+            <a class="uk-button btn-brand" href="#">view all</a>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- END uk-section -->
+      <hr class="uk-margin">
+
+
+
+
+
+
+
+
+
+
+      
+      <!-- start section -->
+      <div class="uk-grid-match uk-grid-small" uk-grid>
+        <div class="uk-width-extend uk-width-1-2@m " id="Sec-Fourms">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-list">
+              <div class="wg-wrapper uk-padding bg-white">
+                <div class="wg-header">
+                  <h1>Forums</h1>
+                </div>
+                <div class="wg-content">
+                  <h2>Featured forums</h2>
+                  <ul class="uk-list slimscroll">
+                    <li>
+                      <div class="item-content">
+                        <a href="#" class="uk-visible@m">
+                          <div class="uk-cover-container" style="background-image:url('static/media/profile.jpg')"></div>
+                        </a>
+                        <div class="item-details">
+                          <a href="#">
+                            <h3>How to get started with timesheets</h3>
+                            <p>
+                              <label>
+                                <span class="highlight">120</span> posts</label>
+                              <label>
+                                <span class="highlight">90</span> comments</label>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <a href="#" class="uk-visible@m">
+                          <div class="uk-cover-container" style="background-image:url('static/media/profile.jpg')"></div>
+                        </a>
+                        <div class="item-details">
+                          <a href="#">
+                            <h3>How to create a forum</h3>
+                            <p>
+                              <label>
+                                <span class="highlight">120</span> posts</label>
+                              <label>
+                                <span class="highlight">90</span> comments</label>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="uk-width-extend uk-width-1-2@m" id="Sec-IndNews">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-twitter">
+              <div class="wg-wrapper uk-padding bg-primary">
+                <div class="wg-header">
+                  <h1>Industry News</h1>
+                  <span class="wg-options">
+                    <a class="uk-button btn-white" href="#">view all</a>
+                  </span>
+                </div>
+                <div class="wg-content">
+                  <ul class="uk-list slimscroll">
+                    <li>
+                      <div class="item-content">
+                        <a href="#">
+                          <div class="uk-cover-container" style="background-image:url('static/media/profile.jpg')"></div>
+                        </a>
+
+                        <div class="item-details">
+                          <a href="#">
+                            <h3>Media Left</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.</p>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <a href="#">
+                          <div class="uk-cover-container" style="background-image:url('static/media/profile.jpg')"></div>
+                        </a>
+
+                        <div class="item-details">
+                          <a href="#">
+                            <h3>Media Left</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.</p>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content">
+                        <a href="#">
+                          <div class="uk-cover-container" style="background-image:url('static/media/2-layers.png')"></div>
+                        </a>
+
+                        <div class="item-details">
+                          <a href="#">
+                            <h3>Media Left</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.</p>
+                            <img src="static/media/twitter-media.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="wg-footer uk-hidden@m">
+                  <a class="uk-button btn-white" href="#">view all</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- end section -->
+      <!-- start section -->
+      <div class="uk-grid-match uk-grid-small" uk-grid>
+        <div class="uk-width-extend uk-width-2-5@l" id="Sec-Workspace">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-tabs" custom-tabs>
+              <div class="wg-wrapper uk-padding bg-white">
+                <div class="wg-header">
+                  <h1>HR Workspace</h1>
+                </div>
+                <div class="wg-content">
+                  <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider>
+                    <ul class="uk-slider-items uk-subnav uk-subnav-pill" tabs-nav>
+                      <li class="active-tab">
+                        <a href="#">My Info</a>
+                      </li>
+                      <li>
+                        <a href="#">whistleblower</a>
+                      </li>
+                      <li>
+                        <a href="#">HC Contacts</a>
+                      </li>
+                      <li>
+                        <a href="#">leaves</a>
+                      </li>
+                      <li>
+                        <a href="#">Medical Network</a>
+                      </li>
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                      uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                      uk-slider-item="next"></a>
+                  </div>
+
+                  <ul class="uk-switcher switcher-container" tabs-content>
+                    <li class="active-tab">
+                      <div>
+
+                        <div class="uk-margin uk-grid uk-grid-small uk-child-width-1-3@s uk-grid-match" uk-grid>
+                          <div>
+                            <div class="uk-card uk-card-body tile-card-number">
+                              <b>16</b>
+                              <label>Leave Accrued</label>
+
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="uk-card uk-card-body tile-card-number">
+                              <b>16</b>
+                              <label>Leave Taken</label>
+
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="uk-card uk-card-body tile-card-number">
+                              <b>6</b>
+                              <label>Sick Leave Taken</label>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container uk-margin">
+                          <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                            unknown
+                            printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        </div>
+                        <div class="container uk-margin">
+                          <div class="uk-flex uk-flex-between">
+                            <div><a class="uk-button btn-brand" href="#">Request Vacation</a></div>
+                            <div><a class="uk-button btn-underline" href="#"><span uk-icon="icon: chevron-right"></span><span
+                                  class="text">Log Sick Leave</span></a></div>
+                          </div>
+                        </div>
+
+
+
+
+                      </div>
+                    </li>
+                    <li>
+                      <ul class="uk-list slimscroll">
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor 2</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="uk-list slimscroll">
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor3</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="uk-list slimscroll">
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor4</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="uk-list slimscroll">
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor5</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="details">
+                              <a href="#">
+                                <h3>HR Advisor</h3>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                  an unknown
+                                  printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="uk-width-extend uk-width-3-5@l" id="Sec-Notifications">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-notifications">
+              <div class="wg-wrapper uk-padding bg-white">
+                <div class="wg-header">
+                  <h1>My notifications</h1>
+                  <span class="wg-options">
+                    <a class="uk-button btn-brand" href="#">view all</a>
+                  </span>
+                </div>
+                <div class="wg-content">
+                  <ul class="uk-list slimscroll">
+                    <li class="unread">
+                      <div class="item-content tile-notification-item">
+                        <div class="item-details">
+                          <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                            <h3>
+                              <span uk-icon="icon: users"></span>Communities</h3>
+                            <p>
+                              <b>Tom harry</b> joined your
+                              <b>fitness</b> group</p>
+                            <label>5 hours ago</label>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content tile-notification-item">
+                        <div class="item-details">
+                          <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                            <h3>
+                              <span uk-icon="icon: users"></span>Communities</h3>
+                            <p>
+                              <b>Tom harry</b> joined your
+                              <b>fitness</b> group</p>
+                            <label>5 hours ago</label>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content tile-notification-item">
+                        <div class="item-details">
+                          <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                            <h3>
+                              <span uk-icon="icon: users"></span>Communities</h3>
+                            <p>
+                              <b>Tom harry</b> joined your
+                              <b>fitness</b> group</p>
+                            <label>5 hours ago</label>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content tile-notification-item">
+                        <div class="item-details">
+                          <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                            <h3>
+                              <span uk-icon="icon: users"></span>Communities</h3>
+                            <p>
+                              <b>Tom harry</b> joined your
+                              <b>fitness</b> group</p>
+                            <label>5 hours ago</label>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content tile-notification-item">
+                        <div class="item-details">
+                          <a href="https://www.google.com.eg/" class="notification-btn" notification-id="1" data-api="notification.json">
+                            <h3>
+                              <span uk-icon="icon: users"></span>Communities</h3>
+                            <p>
+                              <b>Tom harry</b> joined your
+                              <b>fitness</b> group</p>
+                            <label>5 hours ago</label>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="wg-footer uk-hidden@m">
+                  <a class="uk-button btn-brand" href="#">view all</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- end section -->
+      <!-- start section -->
+      <div class="uk-grid-match uk-grid-small" uk-grid>
+        <div class="uk-width-1-1" id="Sec-Events">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-card-slider widget-events" data-api="events.json">
+              <div class="wg-wrapper uk-padding bg-white">
+                <div class="wg-header">
+                  <h1>Events</h1>
+                  <span class="wg-options">
+                    <div class="uk-button-group" uk-switcher="connect: #calendar-event-toggle ; animation: uk-animation-fade">
+                      <button class="uk-button uk-button-default">
+                        <span uk-icon="icon: thumbnails"></span>
+                      </button>
+                      <button class="uk-button uk-button-default">
+                        <span uk-icon="icon: list"></span>
+                      </button>
+                    </div>
+                    <a class="uk-button btn-brand" href="#">view all</a>
+                  </span>
+                </div>
+                <div class="wg-content">
+                  <ul class=" uk-switcher" id="calendar-event-toggle">
+
+                    <li class="calendar-container toggle">
+                      <div class="uk-grid-collapse" uk-grid>
+                        <div class="uk-width-1-1 uk-width-1-2@m uk-width-1-3@xl">
+                          <div class="calendar-wrapper"></div>
+                        </div>
+                        <div class="uk-width-extend uk-width-1-2@m uk-width-2-3@xl uk-grid-item-match">
+                          <div class="calendar-events">
+                            <h2><span data-date>22/3/2018</span> events</h2>
+                            <div class="events-wrapper">
+                            </div>
+                            <div class="events-empty" hidden>
+                              <span uk-icon="icon: future; ratio:3"></span>
+                              <p>
+                                No events today check tomorrow :D
+                              </p>
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calendar-legend">
+                        <h2>Colour Codes</h2>
+                        <p>
+                          <label class="event-brand">
+                            <span class="event-indicator event-brand"></span> Bank holiday (3)</label>
+                          <label class="event-primary">
+                            <span class="event-indicator event-primary"></span> Company meeting (8)</label>
+                          <label class="event-third">
+                            <span class="event-indicator event-third"></span> Offiste day (1)</label>
+                        </p>
+                      </div>
+
+                    </li>
+                    <li class="events-container toggle">
+                      <div uk-slider="finite: false; autoplay: true; center: true;">
+                        <div class="uk-position-relative uk-visible-toggle">
+                          <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@m uk-grid uk-grid-small">
+                            <li>
+                              <a href="http://www.yahoo.com">
+                                <div class="tile-card bg-white uk-card uk-card-default">
+                                  <!-- <div class="uk-card-media-top" style="background-image: url(img/cover1.jpg);"> -->
+                                  <div class="uk-card-media-top">
+                                    <img src="img/cover.jpg">
+                                  </div>
+                                  <div class="uk-card-body">
+                                    <h4>18/12/2018</h4>
+                                    <h3>Christmas Dinner</h3>
+                                    <p>
+                                      <span uk-icon="icon: location"></span>Jumeriah Joad, Umm Suqeim 3 - Dubai UAE</p>
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <div class="tile-card bg-white uk-card uk-card-default">
+                                  <!-- <div class="uk-card-media-top" style="background-image: url(img/cover.jpg);"> -->
+                                  <div class="uk-card-media-top">
+                                    <img src="img/cover1.jpg">
+                                  </div>
+                                  <div class="uk-card-body">
+                                    <h4>18/12/2018</h4>
+                                    <h3>Christmas Dinner</h3>
+                                    <p>
+                                      <span uk-icon="icon: location"></span>Jumeriah Joad, Umm Suqeim 3 - Dubai UAE</p>
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <div class="tile-card bg-white uk-card uk-card-default">
+                                  <!-- <div class="uk-card-media-top" style="background-image: url(img/cover.jpg);"> -->
+                                  <div class="uk-card-media-top">
+                                    <img src="img/Eid Al Adha 2018 - old.jpg">
+                                  </div>
+                                  <div class="uk-card-body">
+                                    <h4>18/12/2018</h4>
+                                    <h3>Christmas Dinner</h3>
+                                    <p>
+                                      <span uk-icon="icon: location"></span>Jumeriah Joad, Umm Suqeim 3 - Dubai UAE</p>
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <div class="tile-card bg-white uk-card uk-card-default">
+                                  <!-- <div class="uk-card-media-top" style="background-image: url(static/media/dark.5624122c.jpg);"> -->
+                                  <div class="uk-card-media-top ">
+                                    <img src="static/media/dark.5624122c.jpg">
+                                  </div>
+                                  <div class="uk-card-body">
+                                    <h4>18/12/2018</h4>
+                                    <h3>Christmas Dinner</h3>
+                                    <p>
+                                      <span uk-icon="icon: location"></span>Jumeriah Joad, Umm Suqeim 3 - Dubai UAE</p>
+                                  </div>
+                                </div>
+                              </a>
+                          </ul>
+                        </div>
+                        <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="wg-footer uk-hidden@m">
+                  <a class="uk-button btn-brand" href="#">view all</a>
+                </div>
+
+
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- end section -->
+
+      <!-- start section -->
+      <div class="uk-grid-match uk-grid-small" uk-grid>
+        <div class="uk-width-extend uk-width-1-3@m " id="Sec-Poll">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-poll" data-api="poll.json" data-qid="12" data-result="poll.json">
+              <div class="wg-wrapper uk-padding bg-secondary">
+                <div class="wg-header">
+                  <h1>Poll</h1>
+                </div>
+                <div class="wg-content">
+                  <h3>Did you enjoy the summer party?</h3>
+                  <div class="uk-form-controls uk-form-controls-text">
+                    <label class="uk-button">
+                      <input class="uk-radio" type="radio" name="poll-option" value="o1">
+                      <span>it was fun</span>
+                    </label>
+                    <label class="uk-button">
+                      <input class="uk-radio" type="radio" name="poll-option" value="o2">
+                      <span>could have been better</span>
+                    </label>
+                  </div>
+
+                  <div class="poll-result uk-position-cover uk-animation-fade">
+                    <button type="button " class="uk-modal-close-default" uk-close></button>
+
+                    <div class="uk-position-center">
+                      <h3>Did you enjoy the summer party?</h3>
+                      <div class="poll-result-wrapper uk-grid uk-grid-collapse uk-child-width-extend " uk-grid>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="wg-footer">
+                  <a class="uk-button btn-white btn-submit ">submit</a>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-card-slider">
+              <div class="wg-wrapper uk-padding bg-white">
+                <div class="wg-header">
+                  <h1>Services</h1>
+                  <span class="wg-options">
+                    <a class="uk-button btn-brand" href="#">view all</a>
+                  </span>
+                </div>
+                <div class="wg-content">
+                  <div uk-slider="autoplay: true">
+                    <div class="uk-position-relative uk-visible-toggle">
+                      <ul class="uk-slider-items uk-grid-small uk-grid uk-grid-divider uk-grid">
+                        <li>
+                          <div class="tile-icon-data">
+                            <a href="#">
+                              <span uk-icon="icon: ap_departments-corporate-coms"></span>
+                            </a>
+                            <h3>
+                              <a href="#">IT helpdesk</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt</p>
+
+                          </div>
+                        </li>
+                        <li>
+                          <div class="tile-icon-data">
+                            <a href="#">
+                              <span uk-icon="icon: cog"></span>
+
+                              <h3>
+                                <a href="#">IT helpdesk</a>
+                              </h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt</p>
+
+                          </div>
+                        </li>
+                        <li>
+                          <div class="tile-icon-data">
+                            <a href="#">
+                              <span uk-icon="icon: ap_departments-conventional"></span>
+                            </a>
+                            <h3>
+                              <a href="#">IT helpdesk</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt</p>
+
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+                  </div>
+                </div>
+                <div class="wg-footer uk-hidden@m">
+                  <a class="uk-button btn-brand" href="#">view all</a>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+        <div class="uk-width-extend uk-width-2-3@m " id="Sec-Offers">
+          <div class="uk-child-width-1-1 uk-grid-match uk-grid-small " uk-grid uk-sortable="group: sortable-group ; handle: .wg-handle">
+            <section class="widget widget-card-slider">
+              <div class="wg-wrapper uk-padding bg-white">
+                <div class="wg-header">
+                  <h1>Offers and Promotions</h1>
+                  <span class="wg-options">
+                    <a class="uk-button btn-brand" href="#">view all</a>
+                  </span>
+                </div>
+                <div class="wg-content">
+                  <div uk-slider="autoplay: true">
+                    <div class="uk-position-relative uk-visible-toggle">
+                      <ul class="uk-slider-items uk-grid-small uk-grid uk-child-width-1-1 uk-child-width-1-2@m">
+                        <li>
+                          <a href="#">
+                            <div class="tile-card uk-card">
+                              <!-- <div class="uk-card-media-top" style="background-image: url(static/media/dark.5624122c.jpg);"></div> -->
+                              <div class="uk-card-media-top">
+                                <img src="img/cover.jpg">
+                              </div>
+                              <div class="uk-card-body">
+                                <h3>
+                                  Four Seasons Brunch
+                                </h3>
+                                <h4>Expires in 2 days</h4>
+                                <p>50% off</p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="tile-card uk-card">
+                              <!-- <div class="uk-card-media-top" style="background-image: url(static/media/dark.5624122c.jpg);"></div> -->
+                              <div class="uk-card-media-top">
+                                <img src="img/cover1.jpg">
+                              </div>
+                              <div class="uk-card-body">
+                                <h3>
+                                  Four Seasons Brunch
+                                </h3>
+                                <h4>Expires in 2 days</h4>
+                                <p>50% off</p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <div class="tile-card uk-card">
+                              <!-- <div class="uk-card-media-top" style="background-image: url(static/media/dark.5624122c.jpg);"></div> -->
+                              <div class="uk-card-media-top">
+                                <img src="static/media/dark.5624122c.jpg">
+                              </div>
+                              <div class="uk-card-body">
+                                <h3>
+                                  Four Seasons Brunch
+                                </h3>
+                                <h4>Expires in 2 days</h4>
+                                <p>50% off</p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+                  </div>
+                </div>
+                <div class="wg-footer uk-hidden@m">
+                  <a class="uk-button btn-brand" href="#">view all</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- end section -->
+    </div>
+  </div>
+  <footer>
+    <div class="uk-container uk-container-large">
+      <div class="uk-text-center" uk-grid>
+        <div class="uk-width-auto">
+          <ul class="uk-subnav uk-subnav-divider" uk-margin>
+            <li class="uk-active">
+              <a href="#">Feedback</a>
+            </li>
+            <li>
+              <a href="#">terms of use</a>
+            </li>
+            <li>
+              <a href="#">support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="uk-width-expand@m uk-width-1-1@s">
+          <div class="uk-child-width-1-1 uk-text-center@s uk-text-right@m" uk-grid>
+            <div>
+              <span> &copy; 2018 ACWA POWER</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.uk-notification{
+    .uk-notification-message{
+        @include font-size($md-font);
+        text-transform: capitalize;
+        &.uk-notification-message-primary{
+            color: $primary;
+        }
+        &.uk-notification-message-danger{
+            color: $brand;
+        }
+    }   
+}

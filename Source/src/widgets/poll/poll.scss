@@ -1,0 +1,133 @@
+@import "../../base/_index";
+
+.widget-poll {
+    h1 {
+        color: $text;
+    }
+
+    .wg-content {
+
+        //position: relative;
+        @include md {
+            padding: 25px 0;
+        }
+
+        h3 {
+            @include font-size($md-font);
+        }
+
+        .btn-disabled {
+            opacity: 0.5;
+        }
+
+        .uk-button {
+            background: none;
+            padding: 0;
+            border: none;
+            border-radius: 0px;
+            width: 100%;
+            text-align: left;
+            color: $text;
+
+            &:hover {
+                span {
+                    background: lighten($secondary, 10%);
+                }
+            }
+
+            @include font-size($sm-font);
+
+            +.uk-button {
+                margin-top: 10px;
+            }
+
+            @include md {
+                line-height: 60px;
+            }
+
+            span {
+                display: block;
+                padding: 0 15px;
+                background: rgba($white, 0.2);
+                @include transition(0.3s ease-in-out);
+            }
+
+            .uk-radio {
+                display: none;
+
+                &:checked {
+                    +span {
+                        background: lighten($secondary, 30%);
+                    }
+                }
+            }
+        }
+
+
+        .poll-result {
+            background: $secondary;
+            z-index: 2;
+            display: none;
+
+            h3 {
+                padding: 0 30px;
+                margin: 0;
+            }
+
+            &.on {
+                display: block;
+            }
+
+            .uk-position-center {
+                width: 100%;
+                display: block;
+            }
+
+            .poll-result-item {
+                color: $text;
+
+                width: 100%;
+                margin: 10px 30px;
+
+                span {
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: auto;
+                    @include font-size($sm-font);
+                }
+
+                label {
+                    font-weight: bold;
+                    margin-bottom: 6px;
+                    @include font-size($sm-font);
+                }
+
+                progress {
+                    height: 30px;
+                    border: 0px none;
+                    background-color: darken($secondary, 10%);
+                    color: lighten($secondary, 20%);
+                    @include transition(0.3s ease);
+                    
+
+                    &::-webkit-progress-bar {
+                        @include transition(0.3s ease);
+                        background-color: darken($secondary, 10%);
+                    }
+
+                    &::-webkit-progress-value {
+                        @include transition(0.3s ease);
+                        background-color: lighten($secondary, 20%);
+                    }
+
+                    &::-moz-progress-bar {
+                        @include transition(0.3s ease);
+                        background-color: lighten($secondary, 20%);
+                    }
+                }
+            }
+        }
+    }
+}

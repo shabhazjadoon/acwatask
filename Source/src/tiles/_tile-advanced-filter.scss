@@ -1,0 +1,178 @@
+.tile-advanced-filter{
+    .tl-content{
+        // >div{
+        //     >div{
+        //         +div{
+        //             @include sm{
+        //                 position: relative;
+        //                 &:before{
+        //                     content: "";
+        //                     height: calc(100% - 60px);
+        //                     position: absolute;
+        //                     width: 1px;
+        //                     background: $lighter-grey;
+        //                     left: 15px;
+        //                     bottom: 0;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        .custom-round-chk{
+            margin: 6px 0px;
+            display: flex;
+            flex-wrap: wrap;
+            >label{
+                width: 60px;
+                padding: 0 4px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 8px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover{
+                    .uk-checkbox{
+                        +label{
+                            border-color: rgba($brand,0.6);
+                        }
+                    }
+                    span {
+                        //color: $brand-hover;
+                    }
+                }
+                .uk-checkbox{
+                    display: none;
+                    +label{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        border: 1px solid $lighter-grey;
+                        margin-left: 0px;
+                        transition: .2s ease-in-out;
+                        box-sizing: border-box;
+                        display: inline-block;
+                    }
+                    &:checked, &:indeterminate{
+                        +label{
+                            background-color: $brand-hover;
+                            //border-color: transparent;
+                            +.uk-icon{
+                                color: $white;
+                                svg{
+                                    *{
+                                        fill: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .uk-icon{
+                    position: absolute;
+                    top:8px;
+                    color: $primary;
+                    @media all and (-ms-high-contrast:none){//for ie 11
+                        transform: translateX(-50%);
+                    }
+                }
+                span{
+                    line-height: 1.2;
+                    margin-top: 2px;
+                    text-align: center;
+                    color: $text;
+                    width: 100%;
+                    @include font-size($xs-font);
+                }
+            }
+
+            +.custom-round-chk{
+                margin: 0;
+            }
+        }
+        label{
+            @include font-size($xs-font);
+            color: $text;
+            &.lbl{
+                font-weight: bold;
+                @include font-size($xxs-font);
+            }
+        }
+        .show-more-options{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            @include font-size($xs-font);
+            border-bottom: 2px solid $lighter-grey;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            &.on{
+                display: none;
+            }
+        }
+        .uk-select{
+            padding-left: 0;
+            min-width: 50px;
+        }
+        .wraper{
+            >div{
+                padding-bottom: 15px;
+                flex-direction: column;
+                @include sm{
+                    flex-direction: row;
+                }
+                .lbl{
+                    margin-right: 10px;
+                    margin-bottom: 8px;
+                    width: 100px;
+                }
+                >div{
+                    label{
+                        +label{
+                            margin-left: 8px;
+                        }
+                        input.uk-checkbox{
+                            &:checked, &:indeterminate{
+                                background-color: $brand-hover;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .tl-footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid $lighter-grey;
+        @include sm{
+            flex-direction: row;
+        }
+        >a{
+            &:first-of-type{
+                color: $brand;
+                @include sm{
+                    margin-right: auto;
+                    width:100%;
+                }
+                &:hover{
+                    color: $brand-hover;
+                }
+            }
+        }
+        span{
+            margin-top: 8px;
+            @include sm{
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+        }
+    }
+}

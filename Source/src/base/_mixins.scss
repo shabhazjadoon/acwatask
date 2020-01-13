@@ -1,0 +1,450 @@
+// Responsive Font-Size
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint==null {
+      font-size: $fs-font-size;
+    } @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+// Shadow
+@mixin shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// Transform
+//@include transform(all,300ms,ease);
+@mixin transform($transform...) {
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  -webkit-transform: $transform;
+  transform: $transform;
+}
+
+// Transition
+//@include transition(all,300ms,ease);
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+  -moz-transition-property: $duration;
+  -o-transition-property: $duration;
+  -webkit-transition-property: $duration;
+  transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function: $timing;
+  -o-transition-timing-function: $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+// Place holder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// Animation
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin ifont {
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/// Gradient Mixin
+//   @include linear-gradient(#31B7D7, #EDAC7D);
+//   @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);
+//   @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);
+/// @author Chris Eppstein
+/// @param {Number} $value - Value to convert
+/// @param {String} $unit - Unit to convert to
+/// @return {Number} Converted angle
+@function convert-angle($value, $unit) {
+  $convertable-units: deg grad turn rad;
+  $conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);
+  @if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
+    @return $value / nth($conversion-factors, index($convertable-units, unit($value))) * nth($conversion-factors, index($convertable-units, $unit));
+  }
+  @warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
+}
+
+/// Test if `$value` is an angle
+/// @param {*} $value - Value to test
+/// @return {Bool}
+@function is-direction($value) {
+  $is-direction: index(
+
+    (
+      to top,
+      to top right,
+      to right top,
+      to right,
+      to bottom right,
+      to right bottom,
+      to bottom,
+      to bottom left,
+      to left bottom,
+      to left,
+      to left top,
+      to top left
+    ),
+    $value
+  );
+  $is-angle: type-of($value)=="number" and
+    index("deg" "grad" "turn" "rad", unit($value));
+  @return $is-direction or $is-angle;
+}
+
+/// Convert a direction to legacy syntax
+/// @param {Keyword | Angle} $value - Value to convert
+/// @require {function} is-direction
+/// @require {function} convert-angle
+@function legacy-direction($value) {
+  @if is-direction($value) ==false {
+    @warn "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be an angle or a direction";
+  }
+  $conversion-map: (
+    to top: bottom,
+    to top right: bottom left,
+    to right top: left bottom,
+    to right: left,
+    to bottom right: top left,
+    to right bottom: left top,
+    to bottom: top,
+    to bottom left: top right,
+    to left bottom: right top,
+    to left: right,
+    to left top: right bottom,
+    to top left: bottom right
+  );
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+  @return 90deg - convert-angle($value, "deg");
+}
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {String | List | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+  @if is-direction($direction) ==false {
+    $color-stops: (
+      $direction,
+      $color-stops
+    );
+    $direction: 180deg;
+  }
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
+  background: linear-gradient($direction, $color-stops);
+}
+
+/// Mixin printing a radial-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {String | List | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin radial-gradient( $color-stops...) {
+  background: -moz-radial-gradient(center, ellipse cover, $color-stops);
+  /* ff3.6+ */
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    $color-stops
+  );
+  /* safari4+,chrome */
+  background: -webkit-radial-gradient(center, ellipse cover, $color-stops);
+  /* safari5.1+,chrome10+ */
+  background: -o-radial-gradient(center, ellipse cover, $color-stops);
+  /* opera 11.10+ */
+  background: -ms-radial-gradient(center, ellipse cover, $color-stops);
+  /* ie10+ */
+  background: radial-gradient(ellipse at center, $color-stops);
+  /* w3c */
+}
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+  @return $x1;
+}
+
+//  Media queries mixins
+
+@mixin xs {
+  @media only screen and (min-width: #{map-get($breakpoints, xs)}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (min-width: #{map-get($breakpoints, sm)}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: #{map-get($breakpoints, md)}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: #{map-get($breakpoints, lg)}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: #{map-get($breakpoints,xl)}) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media only screen and (min-width: #{map-get($breakpoints,xxl)}) {
+    @content;
+  }
+}
+
+@mixin custom-width ($min) {
+  @media only screen and (min-width: #{$min}) {
+    @content;
+  }
+}
+
+//clearfix
+@mixin clearfix {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @media (min-width: 576px) {
+    width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 30px;
+    width: 1360px;
+  }
+
+  // @media (min-width: 1500px){
+  //     width: 1360px;
+  // }
+}
+//draw button
+
+@mixin btn-draw($color, $color-hov, $width: 1px, $padding: 0.5em, $time: 0.2s) {
+  position: relative;
+
+  display: inline-block;
+
+  color: $color;
+  border-bottom: $width solid $color;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color $time ease-in-out, background-color $time ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    height: 100%;
+    width: $width;
+
+    background: $color;
+    transform: translateY(100%);
+    transition: transform $time ease-in-out;
+    transition-delay: $time * 3;
+  }
+
+  > span {
+    position: relative;
+
+    display: block;
+    padding: $padding;
+
+    color: inherit;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background: $color;
+      transition: transform $time ease-in-out;
+    }
+
+    &:before {
+      height: $width;
+      width: 100%;
+
+      transform: translateX(100%);
+      transition-delay: $time * 2;
+    }
+
+    &:after {
+      height: 100%;
+      width: $width;
+
+      transform: translateY(-100%);
+      transition-delay: $time;
+    }
+  }
+
+  &:hover:after,
+  &:hover > span:before,
+  &:hover > span:after {
+    transform: translate(0, 0);
+  }
+
+  &:hover:after {
+    transition-delay: 0s;
+  }
+
+  &:hover > span:before {
+    transition-delay: $time;
+  }
+
+  &:hover > span:after {
+    transition-delay: $time * 2;
+  }
+
+  &:hover {
+    color: $color-hov;
+    background-color: $color;
+    transition-delay: $time * 3;
+  }
+}
+//vertical align
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+//placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

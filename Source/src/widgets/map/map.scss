@@ -1,0 +1,49 @@
+@import "../../base/_index";
+
+.widget-map {
+    display: flex;
+    .wg-header {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        background: darken($color: $grey, $amount: 5%);
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        height: 35px;
+
+        h3 {
+            @include font-size($xs-font);
+            color: $white;
+            margin: 0px;
+
+            .uk-icon {
+                color: $white;
+
+                svg {
+                    height: unset;
+                    width: unset;
+                }
+            }
+        }
+    }
+    .wg-wrapper, .wg-content{
+        display: flex;
+        flex: 1;
+        .tile-map{
+            display: flex;
+            flex: 1;
+            .map-container{
+                display: flex;
+                flex: 1;
+            }
+        }
+    }
+    // &.height-large{
+    //     .map-container{
+    //         height: 570px;
+    //     }
+    // }
+}

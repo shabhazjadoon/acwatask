@@ -1,0 +1,16 @@
+.tile-overview{
+    .tl-content{
+        h3{
+            @include font-size($lg-font);
+            color: $text;
+            font-weight: bold;
+            border-bottom: 1px solid lighten($color: $light-grey, $amount: 10%);
+            padding-bottom: 20px;
+        }
+        p{
+            @include font-size($sm-font);
+            color: $text;
+            font-weight: 600;
+        }
+    }
+}

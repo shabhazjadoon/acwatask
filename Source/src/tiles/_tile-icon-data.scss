@@ -1,0 +1,28 @@
+.tile-icon-data {
+  text-align: center;
+  //max-width: 60%;
+  margin: 0 auto;
+  min-width: 130px;
+  max-width: 230px;
+  .uk-icon {
+    margin-bottom: 10px;
+    svg {
+     // width: 25px;
+     // height: 25px;
+    }
+  }
+  h3 {
+    @include font-size($md-font);
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+  p {
+    @include font-size($sm-font);
+    margin: 0;
+    .uk-icon {
+      svg {
+        height: 16px;
+      }
+    }
+  }
+}

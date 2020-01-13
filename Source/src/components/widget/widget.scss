@@ -1,0 +1,139 @@
+@import "../../base/index";
+.widget {
+  @include transition(opacity 0.4s ease-in-out);
+  .wg-wrapper {
+    position: relative;
+  }
+  .wg-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      @include font-size($lg-font);
+      margin: 0;
+      font-weight: bold;
+      &:only-child {
+        @include md {
+          line-height: 40px;
+        }
+      }
+    }
+    .uk-button {
+      display: none;
+
+      text-transform: capitalize;
+      @include md {
+        display: block;
+      }
+    }
+    .uk-icon {
+      color: $brand;
+      @include md {
+        margin-right: 10px;
+      }
+      svg {
+        height: 32px;
+        width: 32px;
+        @include md {
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+    .wg-options {
+      display: flex;
+      .uk-button-group {
+        display: block;
+        border: 2px solid $brand;
+        background: $brand;
+        border-radius: 100px;
+        overflow: hidden;
+        @include md{
+          margin-right: 15px;
+        }
+        .uk-button {
+          display: inline-block;
+
+          text-transform: capitalize;
+          height: 100%;
+          padding: 0;
+          border: none;
+          background: none;
+          border-radius: 0;
+          padding: 0 10px;
+          background: $white;
+          &:first-child {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+          }
+          &:last-child {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+          }
+          &.uk-active {
+            background: $brand;
+            color: $white;
+            .uk-icon {
+              color: $white;
+            }
+          }
+          .uk-icon {
+            margin: 0;
+            svg {
+              width: 25px;
+              height: 25px;
+            }
+          }
+          + .uk-button {
+            border-left: 2px solid $brand;
+          }
+        }
+      }
+    }
+  }
+  .wg-content {
+    padding: 20px 0;
+    @include md {
+      padding-bottom: 0;
+    }
+  }
+  .wg-footer {
+    text-align: center;
+    @include md {
+      text-align: left;
+    }
+    .uk-button {
+      width: 100%;
+      @include md {
+        width: auto;
+      }
+    }
+  }
+  .wg-handle {
+    display: none;
+    cursor: move;
+    background-color: rgba($active, 0.85);
+    z-index: 2;
+
+    .uk-icon {
+      color: $white;
+      border-radius: 100%;
+      padding: 10px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 100%;
+        width: 200%;
+        height: 200%;
+        left: -50%;
+        top: -50%;
+        animation: pulse 1s infinite;
+      }
+    }
+  }
+  >.uk-card-default{
+    height: 100%;
+  }
+}

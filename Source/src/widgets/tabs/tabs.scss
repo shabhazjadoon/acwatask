@@ -1,0 +1,145 @@
+@import "../../base/_index";
+.widget-tabs {
+  &.tabs-large{
+    .wg-content{
+      .uk-slider{
+        ul.uk-subnav {
+          li {
+            a {
+              @include font-size($md-font);
+            }
+          }
+        }
+      }
+    }
+  }
+  .wg-content {
+    padding-bottom: 0;
+    .uk-slider {
+      background: $grey-bg;
+
+      ul.uk-subnav {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        background: $grey-bg;
+        border-bottom: 1px solid $lighter-grey;
+        li {
+          border-left: 1px solid $lighter-grey;
+          background: $grey-bg;
+          overflow: visible;
+          padding: 0;
+          &.uk-active {
+            a {
+              background: none;
+            }
+          }
+          &.active-tab {
+            border-left-color: transparent;
+
+            + li {
+              border-left-color: $grey-bg;
+            }
+            a {
+              padding: 9px 9px 0 9px;
+              border: 1px solid $lighter-grey;
+              border-bottom: none;
+              color: $black;
+              background: $white;
+            }
+          }
+          a {
+            color: $text;
+            text-transform: none;
+            padding: 10px 10px 0 10px;            
+            @include font-size($sm-font);
+            display: block;
+            height: 100%;
+            min-height: 40px;
+            .uk-icon{
+              svg{
+                width: 30px;
+                height: 30px;
+              }
+            }
+            &:hover {
+              background: lighten($grey-bg, 2%);
+              color: $primary;
+              .uk-icon{
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+      .uk-slidenav {
+        color: $primary;
+      }
+    }
+    ul.switcher-container {
+      background: $white;
+      border: 1px solid $lighter-grey;
+      border-top: none;
+      padding: 20px;
+      >li {
+        &.active-tab {
+          display: block;
+        }
+        .tile-card-number{
+          &.uk-card-body{
+            padding: 8px;
+            @include sm{
+              padding: 20px;
+            }
+          }
+          b{
+            @include font-size($xl-font);
+            @include md{
+              @include font-size($xxl-font);
+            }
+          }
+          label{
+            @include font-size($md-font);
+            @include md{
+              @include font-size($lg-font);
+            }
+          }
+        }
+        ul.uk-list {
+          margin: 0;
+        //  padding: 20px;
+          li {
+            + li {
+              padding-top: 10px;
+              margin-top: 10px;
+              border-top: 2px solid $lighter-grey;
+              @include md {
+                padding-top: 20px;
+                margin-top: 20px;
+              }
+            }
+            .item-content {
+              .details {
+                flex: 1;
+                h3,
+                p {
+                  @include font-size($xs-font);
+                }
+                h3 {
+                  margin-bottom: 5px;
+                  color: $brand;
+                  font-weight: bold;
+                }
+                p {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .wg-footer{
+    margin-top: 20px;
+  }
+}

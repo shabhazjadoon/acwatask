@@ -1,0 +1,91 @@
+@import "../../base/index";
+.uk-button {
+  border-radius: 100px;
+  border: 2px solid;
+  text-transform: none;
+  white-space: nowrap;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  text-transform: capitalize;
+  padding: 0 10px;
+  line-height: 40px;
+  @include transition(0.3s ease);
+  @include md {
+    padding: 0 30px;
+    border-width: 3px;
+    line-height: 32px;
+  }
+  &.btn-underline {
+    border: none;
+    border-radius: 0;
+    color: $brand;
+    padding: 0;
+    border-bottom: 2px solid $brand;
+    background: none;
+    //@include btn-draw($brand, $white, 3px);
+    &:hover {
+      > span.text {
+        @include transform(translateX(0) !important);
+      }
+      > .uk-icon {
+        opacity: 1;
+        @include transform(translateX(0) !important);
+      }
+    }
+
+    @include md {
+      border-width: 3px;
+    }
+    span.text {
+      display: inline-block;
+      @include transition(0.3s ease-in-out);
+      &:first-child {
+        @include transform(translateX(10px));
+        + .uk-icon {
+          @include transform(translateX(20px));
+        }
+      }
+    }
+    .uk-icon {
+      @include transition(0.3s ease-in-out);
+      opacity: 0;
+      color: $brand;
+      &:first-child {
+        @include transform(translateX(-20px));
+        + span.text {
+          @include transform(translateX(-10px));
+        }
+      }
+    }
+  }
+
+  &.btn-white {
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+      background: $white;
+      color: $brand;
+    }
+    .bg-secondary & {
+      &:hover {
+        color: $secondary;
+      }
+    }
+    .bg-brand & {
+      &:hover {
+        color: $brand;
+      }
+    }
+  }
+  &.btn-brand {
+    color: $brand;
+    border-color: $brand;
+    background: unset;
+    &:hover {
+      background: $brand;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../base/index";
+
+@media print{
+    .noprint{
+        display: none;
+    }
+    footer{
+        margin-top: 20px;
+        .uk-container{
+            >div{
+                >div{
+                    &:first-of-type{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .sc-header{
+        .sc-options{
+            display: none;
+        }
+    }
+    .widget-project-details {
+        padding: 25px 40px;
+    }
+}

@@ -1,0 +1,21 @@
+@import "../../base/index";
+.slimscroll {
+    height: 300px;
+    .scrollbar-track {
+      background-color: #bbbbbb;
+      width: 3px;
+      .scrollbar-thumb {
+        background-color: $white;
+        width: 3px;
+      }
+    }
+  
+    .bg-white & {
+      .scrollbar-track {
+        background-color: #f6f6f6;
+        .scrollbar-thumb {
+          background-color: #bbbbbb;
+        }
+      }
+    }
+  }

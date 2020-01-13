@@ -1,0 +1,94 @@
+.tile-subscribe {
+  margin-bottom: 15px;
+  
+  a.subscribe {
+    background: $primary;
+    display: table-row;
+    text-decoration: none;
+    color: $white;
+    transition: all 0.4s ;
+    &.subscribed{
+      background: $brand;
+      box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.35);
+      .subscribe-icon {
+        background: $brand-hover;
+      }
+      .uk-label {
+        background: $brand;
+      }
+    }
+    .subscribe-icon {
+      background: $primary-hover;
+      padding: 0 5px;
+      height: 25px;
+      display: table-cell;
+      vertical-align: middle;
+      color: $white;
+      transition: all 0.4s ;
+      svg {
+        height: 18px;
+      }
+    }
+    .uk-label {
+      display: table-cell;
+      vertical-align: middle;
+      background: $primary-light;
+      padding-left: 0 15px;
+      border-radius: 0;
+      @include font-size($xs-font);
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $white;
+      transition: all 0.4s ;
+    }
+  }
+}
+
+.tile-sub-subscribe{
+  display: inline-block;
+  position: relative;
+  padding-right: 5px;
+  +.tile-sub-subscribe{
+    padding-left: 5px;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 12px;
+      background: $light-grey;
+      top: 50%;
+      left: -2px;
+      transform: translateY(-50%);
+    }
+  }
+  a.subscribe{
+    display: inline-block;
+    &.subscribed{
+      +a{
+        h5{
+          font-weight: bold;
+          color: $brand-hover;
+        }
+      }
+      .subscribe-icon {
+        color: $brand-hover;
+      }
+    }
+    span{
+      vertical-align: text-bottom;
+      svg{
+        width: 15px;
+        height: 15px;
+      }
+    }
+    +a{
+      display: inline-block;
+      margin: 10px 0px;
+      &:hover{
+        text-decoration: underline;
+      }
+      color: $brand-hover;
+    }
+  }
+  
+}

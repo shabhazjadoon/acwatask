@@ -1,0 +1,27 @@
+form.search {
+  a.uk-icon {
+    color: $light-grey !important;
+  }
+  input {
+    height: 50px;
+    border-color: $light-grey !important;
+    color: $light-grey !important;
+    @include font-size($md-font);
+    @include md {
+      @include font-size($sm-font);
+    }
+    &:focus {
+      border-color: $primary !important;
+      color: $primary !important;
+    }
+    @include placeholder {
+      @include font-size($md-font);
+
+      color: $light-grey !important;
+      font-weight: normal;
+      @include md {
+        @include font-size($sm-font);
+      }
+    }
+  }
+}

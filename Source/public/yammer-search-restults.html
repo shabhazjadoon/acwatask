@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<!--
+manifest.json provides metadata used when your web app is added to the
+homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+-->
+	<!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json"> -->
+	<!-- <link href="/static/css/main.css" rel="stylesheet"> -->
+	<!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+	<!--
+Notice the use of %PUBLIC_URL% in the tags above.
+It will be replaced with the URL of the `public` folder during the build.
+Only files inside the `public` folder can be referenced from the HTML.
+
+Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+work correctly both with client-side routing and a non-root public URL.
+Learn how to configure a non-root public URL by running `npm run build`.
+-->
+	<title>ACWA Power - Search Filtered</title>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<header>
+		<div class="main-nav uk-box-shadow-medium" uk-sticky="media: (max-width: 1199px)">
+			<div class="uk-container uk-container-large">
+				<nav uk-navbar>
+					<div class="uk-navbar-left">
+						<a class="uk-navbar-item uk-logo" href="#">
+							<img src="static/acwa_power.svg" alt="">
+						</a>
+						<div class="uk-navbar-item search uk-visible@l">
+							<form action="javascript:void(0)">
+								<div class="uk-inline"> <span class="uk-form-icon" uk-icon="icon: search"></span>
+									<input class="uk-input uk-form-width-small uk-box-shadow-small" type="search" placeholder="Search for contents and people">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="uk-navbar-right ">
+						<div class="actions">
+							<a href="#" uk-icon="icon: search" class="uk-hidden@l" uk-toggle="target: #mobile-search; animation: uk-animation-slide-left, uk-animation-slide-bottom"></a>
+							<a href="#" class="uk-visible@l"> <span class="uk-text-middle">Hello, Jon</span>
+								<img class="uk-border-circle" src="static/media/profile.jpg" />
+							</a>
+							<a href="#" uk-icon="icon: bell"> <span class="notification">22</span>
+							</a>
+							<a href="#" class="uk-hidden@l mobile-toggler" uk-icon="icon: menu" uk-toggle="target: #mobile-nav"></a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div id="mobile-search" class="uk-hidden@l" hidden>
+				<form class="search">
+					<div class="uk-inline uk-width-1-1">
+						<a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+						<input class="uk-input" type="search" placeholder="Search Department">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="mobile-nav" uk-offcanvas mode="slide" overlay>
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<div class="uk-offcanvas-bar">
+				<div class="uk-child-width-1-1" uk-grid>
+					<div>
+						<nav class="uk-margin-small" uk-navbar>
+							<div class="uk-navbar-left">
+								<a class="uk-navbar-item uk-logo" href="#">
+									<img src="static/acwa_power.svg" alt="">
+								</a>
+							</div>
+						</nav>
+						<div class="uk-padding-small">
+							<form class="search">
+								<div class="uk-margin-small">
+									<div class="uk-inline uk-width-1-1">
+										<a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+										<input class="uk-input" type="search" placeholder="Search">
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="profile uk-padding-small uk-padding-remove-vertical">
+							<a href="#">
+								<img class="uk-border-circle" src="static/media/profile.jpg" /> <span class="uk-text-middle">Hello, Jon</span>
+							</a>
+						</div>
+						<ul class="uk-nav-primary uk-nav-parent-icon first-level" uk-nav>
+							<li class="uk-active">
+								<a href="http://www.google.ae"> <span uk-icon="icon: home"></span> Home</a>
+							</li>
+							<li class="uk-parent">
+								<a href="#"> <span uk-icon="icon: world"></span> News <span uk-icon="icon: chevron-down"></span>
+								</a>
+								<ul class="uk-nav-sub">
+									<li> <a href="http://www.google.ae">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+								</ul>
+							</li>
+							<li class="uk-parent">
+								<a href="#"> <span uk-icon="icon: user"></span> Resources <span uk-icon="icon: chevron-down"></span>
+								</a>
+								<ul class="uk-nav-sub">
+									<li> <a href="#">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"> <span uk-icon="icon: users"></span> People</a>
+							</li>
+							<li class="uk-parent">
+								<a href="#"> <span uk-icon="icon: social"></span> Departments <span uk-icon="icon: chevron-down"></span>
+								</a>
+								<ul class="uk-nav-sub">
+									<li>
+										<form class="search">
+											<div class="uk-margin-small">
+												<div class="uk-inline uk-width-1-1">
+													<a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+													<input class="uk-input" type="search" placeholder="Search Department">
+												</div>
+											</div>
+										</form>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+								</ul>
+							</li>
+							<li class="uk-parent">
+								<a href="#"> <span uk-icon="icon: question"></span> Learning <span uk-icon="icon: chevron-down"></span>
+								</a>
+								<ul class="uk-nav-sub">
+									<li> <a href="#">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+									<li> <a href="#">Sub item</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"> <span uk-icon="icon: comments"></span> Forums</a>
+							</li>
+							<li>
+								<a href="#"> <span uk-icon="icon: credit-card"></span> Portfolio</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="uk-container uk-container-large">
+		<div class="page-header">
+			<!-- Start placeholder -->
+			<div class="uk-grid-match uk-grid-small uk-grid uk-grid-stack" uk-grid="">
+				<div class="uk-width-1-1 uk-first-column">
+					<section class="widget widget-alert uk-alert" uk-alert=""> <span class="wg-icon uk-icon" uk-icon="icon:  rss"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="rss"><circle cx="3.12" cy="16.8" r="1.85"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,8.2 C1.78,8.18 2.06,8.16 2.35,8.16 C7.57,8.16 11.81,12.37 11.81,17.57 C11.81,17.89 11.79,18.19 11.76,18.5"></path><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,2.52 C1.78,2.51 2.06,2.5 2.35,2.5 C10.72,2.5 17.5,9.24 17.5,17.57 C17.5,17.89 17.49,18.19 17.47,18.5"></path></svg></span>
+						<a class="uk-alert-close uk-icon uk-close" uk-close="">
+							<svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
+								<line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+								<line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+							</svg>
+						</a>
+						<div class="uk-position-relative uk-visible-toggle uk-light uk-slider uk-slider-container" uk-slider="autoplay:true; center:true; pause-on-hover:true; autoplay-interval:0; velocity: 0.01">
+							<ul class="uk-slider-items uk-transition" style="transform: translate3d(-843.789px, 0px, 0px); transition-property: transform; transition-duration: 29425.8ms; transition-timing-function: ease;">
+								<li tabindex="-1" class="uk-active"> <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a>
+								</li>
+								<li tabindex="-1" class="uk-active"> <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a>
+								</li>
+								<li tabindex="-1"> <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a>
+								</li>
+								<li tabindex="-1"> <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a>
+								</li>
+								<li tabindex="-1" style="order: -2;"> <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- End placeholder -->
+		</div>
+		<div class="page-content groups-page">
+			<!-- Start placeholder -->
+			<div class="uk-grid-match uk-grid-small uk-grid" uk-grid="">
+				<div class="uk-width-extend uk-width-1-2@m uk-width-1-4@l group-sidebar-container">
+					<div class="uk-child-width-1-1 uk-grid-match uk-grid-small uk-grid uk-grid-stack" uk-grid="">
+						<section class="widget widget-group-sidebar  uk-first-column" data-api="events.json">
+							<div class="wg-wrapper uk-padding bg-white editing-padding">
+								<div class="wg-header">
+									<form>
+										<div class="uk-margin">
+											<div class="uk-inline"> <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></span> 
+												<input class="uk-input" type="text" placeholder="Search">
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="groups-list   uk-width-1-1@l">
+									<div class="uk-grid-match uk-width-1-1@l  uk-grid ">
+										<h3 class=" uk-width-2-2@l	">Groups</h3> 
+									</div>
+									<br>
+									<div class="title">
+										<h5 class="  uk-inline	">Join groups</h5>
+										<a href="#" class="    uk-inline uk-align-right">
+											<h5>See all</h5>
+										</a>
+									</div>
+									<!-- groups boxs start -->
+									<div class="group-container">
+										<div class="group-box  ">
+											<h4>group1</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>10 member</h6>
+										</div>
+										<div class="group-box  ">
+											<h4>group1</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>10 member</h6>
+										</div>
+										<div class="group-box  ">
+											<h4>group1</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>10 member</h6>
+										</div>
+										<div class="group-box  ">
+											<h4>group2</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>4 member</h6>
+										</div>
+										<div class="group-box  ">
+											<h4>group3</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>8 member</h6>
+										</div>
+										<div class="group-box  ">
+											<h4>group4</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>132 member</h6>
+										</div>
+										<div class="group-box  ">
+											<h4>group5</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>200 member</h6>
+										</div>
+									</div>
+									<!-- groups boxs end -->
+								</div>
+								<div class="wg-footer popular-groups ">
+									<div class="uk-grid-match uk-width-1-1@l  uk-grid ">
+										<h3 class=" uk-width-2-2@l	">popular groups</h3> 
+									</div>
+									<!-- groups boxs start -->
+									<div class="group-container">
+										<div class="group-box  ">
+											<h4>group1</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>10 member</h6>
+										</div>
+										<div class="group-box  without-join">
+											<h4>group2</h4> 
+											<h6>4 member</h6>
+										</div>
+										<div class="group-box  ">
+											<h4>group3</h4>
+											<a href="#">
+												<h5> Join</h5>
+											</a>
+											<h6>8 member</h6>
+										</div>
+										<div class="group-box without-join ">
+											<h4>group4</h4> 
+											<h6>132 member</h6>
+										</div>
+									</div>
+									<!-- groups boxs end -->
+								</div>
+							</div>
+						</section>
+						<div style="clear: both"></div>
+					</div>
+				</div>
+				<!-- sidebar of group end here -->
+				<div class="uk-width-extend uk-width-1-2@m uk-width-2-4@l people-section">
+					<div class="uk-child-width-1-1 uk-grid-match uk-grid-small uk-grid uk-grid-stack" uk-grid="">
+						<section class="widget widget-tabs widget-feed-section widget-yammer-search   uk-first-column" data-api="events.json">
+							<div class="wg-wrapper  bg-white">
+								<!-- people start here -->
+								<h3 class="uk-padding-small uk-margin-remove-bottom">Search Results</h3>
+								<div class="new-feed-container uk-padding-small">
+									<input type="text" placeholder="What are you working on?"  yeammer-search-input>
+								</div>
+								<div class="wg-content">
+									<div class="loader-container">
+										<div uk-spinner ></div> 
+									</div>
+									<ul uk-tab uk-switcher>
+										<li class="uk-active">
+											<a href="">
+												<h3 class="uk-width-2-2@l uk-margin-remove-bottom">Messages</h3>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<h3 class="uk-width-2-2@l uk-margin-remove-bottom">Users</h3>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<h3 class="uk-width-2-2@l uk-margin-remove-bottom">Groups</h3>
+											</a>
+										</li>
+									</ul>
+									<!--  -->
+									<!--  -->
+									<!--  -->
+									<ul class="uk-switcher ">
+										<li class="feeds-list-container yammer-messages-container">
+											<script id="search-messages-template" type="text/x-handlebars-template" style="display: none ">
+												<ul class="uk-list ">
+												{{#each feed.comments}}
+												
+													<li class="feed-item-container">
+														<div class="feed-item-head">
+															<span uk-icon="icon: users" class="uk-icon"></span>
+															<span class="feed-item-categ">{{group_name}}</span>
+														</div>
+														<div class="feed-item-author uk-flex uk-flex-middle uk-margin uk-remove-margin-horizontal">
+															<img src="{{image}}" alt="item author profile" class>
+															<div class="author-info uk-margin-left">
+																<h5 class="item-author-name uk-margin-remove">
+																	<!-- Robin Hood -->
+																	{{user_name}}
+																</h5>
+																<span class="item-date-time">
+																	<!-- November 12, 2019 at 10:43 PM -->
+																	{{created_at}}
+																</span>
+															</div>
+														</div>
+														<div class="feed-item-body uk-margin-bottom">
+															<p class="uk-margin-remove" clamp-text>
+																<!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. -->
+																{{#if body.original}}
+																{{{body.rich}}}
+																<span style="display: none;">{{{body.original}}}</span>
+																<a href="javascript:void(0);" class="body-more-link link-primary-style" yammer-read-more>... Read More</a>
+																{{else}}
+																{{{body.rich}}}
+																{{/if}}
+															</p>
+															
+														</div>
+														<div class="feed-item-imgs uk-flex uk-flex-middle uk-margin-small-bottom">
+															<!-- <img src="static/media/dark.jpg" alt="feed item image" class="feed-item-img">
+															<img src="static/media/dark.jpg" alt="feed item image" class="feed-item-img uk-margin-left"> -->
+															{{#each attachments}}
+																{{#if image}}
+																<img src="{{image.url}}" class="feed-item-img" alt="">
+																{{else}}
+																	{{{inline_html}}}
+																{{/if}}	
+															{{/each}}
+														</div>
+														<div class="feed-item-stats uk-margin-bottom">
+															<!-- Abdul Aziz & 4 others liked this -->
+															{{likers_info}}
+														</div>
+														<div class="feed-item-actions uk-flex uk-flex-middle">
+															<a href="javascript:void(0);" class="feed-item-action-like {{#if liked_by_current_user}}active{{/if}}" like-id="{{id}}">Like</a>
+															<div uk-spinner style="display: none;"></div> 
+															<a href="javascript:void(0);" class="feed-item-action-comment uk-margin-left reply">Comment</a>
+														</div>
+														<ul class="feed-item-comments-list">
+															<!-- Each reply start -->
+															{{#each replies}}
+															<li class="feed-item-comment uk-padding-remove-horizontal">
+																<div class="comment-author uk-flex uk-flex-middle uk-margin-bottom">
+																	<img src="{{image}}" alt="comment author profile">
+																	<div class="author-info uk-margin-left">
+																		<h5 class="comment-author-name uk-margin-remove">
+																			<!-- Robin Hood -->
+																			{{user_name}}
+																		</h5>
+																		<span class="comment-date-time">
+																			<!-- November 12, 2019 at 10:43 PM -->
+																			{{created_at}}
+																		</span>
+																	</div>
+																</div>
+																<div class="comment-body uk-margin-bottom">
+																	<p class="comment-content uk-margin-remove">
+																		<!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text... -->
+																		{{#if body.original}}
+																		{{{body.rich}}}
+																		<span style="display: none;">{{{body.original}}}</span>
+																		<a href="javascript:void(0);" class="body-more-link link-primary-style" yammer-read-more>... Read More</a>
+																		{{else}}
+																		{{{body.rich}}}
+																		{{/if}}
+																	</p>
+																</div>
+																<div class="comment-actions uk-flex uk-flex-middle uk-margin-bottom">
+																	<a href="javascript:void(0);" class="comment-action comment-action-like  {{#if liked_by_current_user}}active{{/if}}" like-id="{{id}}">Like</a>
+																	<div uk-spinner style="display: none;"></div>
+																	<a href="javascript:void(0);" class="comment-action comment-action-comment uk-margin-left reply">Comment</a>
+																	<span class="comment-action comment-period-time uk-margin-left">2 days ago</span>
+																</div>
+															</li>
+															{{/each}}
+														</ul>
+														<ul class="comment-replies-list yammer-replies-list">
+															<li >
+																<div class="comment-reply-item uk-flex uk-flex-middle">
+																	<img src="{{user.mugshot_url}}" current-user-image alt="comment reply profile">
+																	<textarea placeholder="Write a reply"></textarea>
+																</div>
+																<div class="uk-width-extend uk-grid-margin uk-first-column">
+																	<button class="uk-button btn-brand postReply" id="{{id}}"><div uk-spinner style="display: none;"></div> Post</button>
+																</div>
+															</li>
+															
+														</ul>
+														<!-- Each reply end -->
+														
+													</li>
+												</ul>
+												{{/each}}
+											</script>
+										</li>
+										<!-- HERE-------- -->
+                                        <li class="yammer-users-container">
+                                            <script id="search-people-list-template" type="text/x-handlebars-template" style="display: none">
+
+                                                <section class="widget widget-people-section   uk-first-column" data-api="events.json">
+                                                    <div class="uk-padding-small bg-white">
+                                                        <!-- people start here -->
+                                                        <div class="wg-content">
+                                                            
+                                                            <!-- start of cards -->
+                                                            {{#each users}}
+                                                                <div class="uk-card uk-card-default uk-card-body card-people uk-width-extend uk-width-1-1@l" id ="{{id}}">
+                                                                    <div class="people-content uk-width-extend uk-width-3-3@l">
+                                                                        <a href="#">
+                                                                            <div class="uk-box-shadow-large uk-cover-container" style="background-image:url('{{mugshot_url}}')"></div>
+                                                                        </a>
+                                                                        <div class="people-details">
+                                                                            <a href="#">
+                                                                                <h3>{{full_name}}</h3>
+                                                                                {{#if job_title}}
+                                                                                <span>{{job_title}}</span>
+                                                                                {{/if}}
+                                                                                <span>{{email}}</span>
+                                                                                <span>{{stats.followers}} followers</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div uk-spinner style="display: none;"></div>
+                                                                    <a id="{{id}}" class="follow followUser" >
+                                                                        follow
+                                                                    </a>
+                                                                    <a  class="follow followed" style="display: none;">
+                                                                        followed <span uk-icon="check"></span>
+                                                                    </a>
+                                                                    <a  class="follow alrd-followed followed" style="display: none;">
+                                                                        already followed! 
+                                                                    </a>
+                                                                </div>
+                                                            {{/each}}
+                    
+                                                            <!-- <a href="#" class="load-more">
+                                                                <div> <span>Load more</span>
+                                                                </div>
+                                                            </a> -->
+                                                        </div>
+                                                        <!-- people end -->
+                                                </section>
+                                            </script>
+                                        </li>
+                                        <li>
+                                        <!-- all group start -->
+                                        <div class="uk-padding-small">
+                                            <div class="wg-content yammer-groups-container">
+                                                <!-- start of cards -->
+                                                
+                                                <script id="search-groups-list-template" type="text/x-handlebars-template" style="display: none">
+        
+                                                    {{#each groups}}
+                                                        <div class="uk-card uk-card-default uk-card-body card-people uk-width-extend uk-width-1-1@l">
+                                                            <div class="people-content uk-width-extend uk-width-3-3@l">
+                                                                <a href="#">
+                                                                    <div class="uk-box-shadow-large uk-cover-container" style="background-image:url('{{header_image_url}}')"></div>
+                                                                </a>
+                                                                <div class="people-details">
+                                                                    <a href="#">
+                                                                        <h3>{{full_name}}</h3>
+                                                                        <span>{{privacy}}: {{stats.members}} members</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div uk-spinner style="display: none;"></div>
+                                                            <a id="{{id}}" class="follow join" >
+                                                                Join
+                                                            </a>
+                                                            <a  class="follow followed" style="display: none;">
+                                                                Joined <span uk-icon="check"></span>
+                                                            </a>
+                                                        </div>
+                                                    {{/each}}
+                                                    
+                                                    </script>
+                                                        </div>    
+
+                                        </div>
+                                            </li>
+                                    </ul>
+								</div>
+								<!-- people end -->
+						</section>
+						</div>
+					</div>
+					<!-- my notifications -->
+					<div class="uk-width-extend  uk-width-1-2@m uk-width-1-4@l  widget-right-sidebar">
+						<div class="uk-child-width-1-1 uk-grid-match uk-grid-small uk-grid uk-grid-stack" uk-grid="">
+							<section>
+								<div class="wg-wrapper   ">
+									<div class="widget-my-notification bg-white uk-padding-small">
+										<div class="title">
+											<h3 class="  uk-inline	">My Notifications</h3>
+											<a href="#" class=" uk-inline uk-align-right">
+												<h5>View all</h5>
+											</a>
+										</div> <span></span>
+										<div class="notification-single">
+											<p> <b>Mahmoud Reda</b> Change the name of group "Aalexandria pay " to another name</p>
+										</div>
+										<div class="notification-single">
+											<p> <b>Mahmoud Reda</b> Change the name of group "Aalexandria pay "</p>
+										</div>
+										<div class="notification-single">
+											<p> <b>Mahmoud Reda</b> Change the name of group "Aalexandria pay "</p>
+										</div>
+										<div class="notification-single">
+											<p> <b>Mahmoud Reda</b> Change the name of group "Aalexandria pay "</p>
+										</div>
+										<div class="notification-single">
+											<p> <b>Mahmoud Reda</b> Change the name of group "Aalexandria pay "</p>
+										</div>
+									</div>
+									<!--recommended people -->
+									<div class="wg-content bg-white uk-padding-small people-right-sidebar">
+										<div class="title">
+											<h3 class="  uk-inline	">People</h3>
+											<a href="#" class=" uk-inline uk-align-right">
+												<h5 style="color:red;">View all</h5>
+											</a>
+										</div> <span></span>
+										<div class="uk-card uk-card-default uk-card-body right-side-people uk-padding-small">
+											<div class="people-content ">
+												<a href="#">
+													<div class="uk-box-shadow-large uk-cover-container" style="background-image:url('static/media/dark.jpg')"></div>
+												</a>
+												<div class="people-details">
+													<a href="#" class="profile">
+														<h5>Jessica Pearson</h5>
+													</a> <a class="follow" href="#"> Follow </a>
+												</div>
+											</div>
+											<div class="people-content ">
+												<a href="#">
+													<div class="uk-box-shadow-large uk-cover-container" style="background-image:url('static/media/dark.jpg')"></div>
+												</a>
+												<div class="people-details">
+													<a href="#" class="profile">
+														<h5>Jessica Pearson</h5>
+													</a> <a class="follow" href="#"> Follow </a>
+												</div>
+											</div>
+											<div class="people-content ">
+												<a href="#">
+													<div class="uk-box-shadow-large uk-cover-container" style="background-image:url('static/media/dark.jpg')"></div>
+												</a>
+												<div class="people-details">
+													<a href="#" class="profile">
+														<h5>Jessica Pearson</h5>
+													</a> <a class="follow" href="#"> Follow </a>
+												</div>
+											</div>
+											<div class="people-content ">
+												<a href="#">
+													<div class="uk-box-shadow-large uk-cover-container" style="background-image:url('static/media/dark.jpg')"></div>
+												</a>
+												<div class="people-details">
+													<a href="#" class="profile">
+														<h5>Jessica Pearson</h5>
+													</a> <a class="follow" href="#"> Follow </a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- recommended people end here -->
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="uk-container uk-container-large">
+			<div class="uk-text-center" uk-grid>
+				<div class="uk-width-auto">
+					<ul class="uk-subnav uk-subnav-divider" uk-margin>
+						<li class="uk-active"> <a href="#">Feedback</a>
+						</li>
+						<li> <a href="#">terms of use</a>
+						</li>
+						<li> <a href="#">support</a>
+						</li>
+					</ul>
+				</div>
+				<div class="uk-width-expand@m uk-width-1-1@s">
+					<div class="uk-child-width-1-1 uk-text-center@s uk-text-right@m" uk-grid>
+						<div> <span> &copy; 2018 ACWA POWER</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" data-app-id="wWUifpnWTcBuuy0JJoY7KQ" src="https://c64.assets-yammer.com/assets/platform_js_sdk.js"></script>
+	<!-- <script type="text/javascript" src="/static/js/main.js"></script> -->
+</body>
+
+</html>

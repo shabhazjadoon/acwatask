@@ -1,0 +1,213 @@
+.tile-comments {
+  h5 {
+    @include font-size($sm-font);
+    border-bottom: 1px solid $lighter-grey;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    color: $primary;
+    span {
+      text-transform: uppercase;
+      color: $primary;
+    }
+
+    .uk-icon {
+      color: $primary;
+      margin-right: 5px;
+    }
+  }
+  textarea {
+    padding: 20px;
+    height: 100px;
+    @include font-size($md-font);
+    +a{
+      margin-left: auto;
+      margin-top: 10px;
+      display: block;
+      width: 130px;
+    }
+  }
+  ul {
+    border-top: 1px solid $lighter-grey;
+    padding-top: 40px;
+    margin-top: 40px;
+    li {
+      margin-bottom: 15px;
+      @include md {
+        margin-bottom: 30px;
+      }
+      .item-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .uk-cover-container {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include md {
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .item-details {
+          margin-left: 20px;
+          flex: 1;
+          background: $bg;
+          padding: 25px;
+
+          .comment-header {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+           
+            span {
+              color: $grey;
+              font-weight: bold;
+              text-transform: capitalize;
+              @include font-size($md-font);
+              display: block;
+              @include md {
+                display: inline-block;
+                @include font-size($sm-font);
+              }
+              + span {
+                &::before {
+                  @include md {
+                    content: " ";
+                    display: inline-block;
+                    height: 15px;
+                    width: 2px;
+                    background: $text;
+                    margin: 0 10px;
+                    position: relative;
+                    top: 3px;
+                  }
+                }
+              }
+            }
+            .comment-options {
+              float: right;
+              .uk-button {
+                background: none;
+                border: none;
+                padding: 0;
+                .uk-icon {
+                  vertical-align: top;
+                  color: $primary;
+                }
+                &.uk-open{
+                  .uk-icon {
+                    color: $brand-hover;
+                  }
+                }
+              }
+              .uk-dropdown {
+                margin: 0;
+                padding: 6px 8px;
+                ul{
+                  margin: 0;
+                  padding: 0;
+                  border: unset;
+                  li{
+                    margin: 0;
+                    padding: 6px 12px;
+                    +li{
+                      //margin-top: 2px;
+                      border-top: 1px solid $lighter-grey
+                    }
+                    a{
+                      width: 100%;
+                      display: inline-block;
+                      .uk-icon{
+                        margin-right: 5px;
+                      }
+                      &:hover{
+                        color: $brand-hover;
+                        .uk-icon{
+                          color: $brand-hover;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .comment-body {
+            margin-bottom: 10px;
+            p {
+              @include font-size($md-font);
+              margin: 0;
+              @include md{
+                @include font-size($sm-font);
+              }
+            }
+            textarea{
+              +div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 6px;
+                padding: 0px 15px;
+                a{
+                  &:first-of-type{
+                    color:lighten($color: $grey, $amount: 8%);
+                    &:hover{
+                      color: $grey;
+                    }
+                  }
+                  &:last-of-type{
+                    color: $brand;
+                    &:hover{
+                      color: $brand-hover;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .comment-footer {
+            span {
+              color: $light-grey;
+              @include font-size($sm-font);
+              font-weight: normal;
+              + span {
+                &::before {
+                  content: " ";
+                  display: inline-block;
+                  height: 15px;
+                  width: 2px;
+                  background: $light-grey;
+                  margin: 0 10px;
+                  position: relative;
+                  top: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.for-edit{
+        position: relative;
+        z-index: 1000;
+      }
+      &.more{
+        text-align: center;
+      }
+    }
+    
+  }
+}
+.for-edit-overlay{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $overlay;
+}

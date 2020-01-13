@@ -1,0 +1,103 @@
+$breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 960px,
+  lg: 1200px,
+  xl: 1600px
+);
+/////////////////
+// Fonts
+////////////////
+$xxxxl-font: (
+  null : 88px,
+  xs : 88px,
+  md : 94px,
+  lg : 100px
+);
+$xxxl-font: (
+  null : 48px,
+  xs : 48px,
+  md : 54px,
+  lg : 60px
+);
+$xxl-font: (
+  null : 32px,
+  xs : 32px,
+  md : 36px,
+  lg : 40px
+);
+$xl-font: (
+  null : 25px,
+  xs : 25px,
+  md : 29px,
+  lg : 33px
+);
+$lg-font: (
+  null : 20px,
+  xs : 20px,
+  md : 22px,
+  lg : 24px
+);
+$md-font: (
+  null : 14px,
+  xs : 14px,
+  md : 16px,
+  lg : 18px
+);
+$sm-font: (
+  null : 12px,
+  xs : 12px,
+  md : 14px,
+  lg : 16px
+);
+$xs-font: (
+  null : 11px,
+  xs : 11px,
+  md : 13px,
+  lg : 14px
+);
+
+$xxs-font: (
+  null : 10px,
+  xs : 10px,
+  md : 11px,
+  lg : 12px
+);
+
+$xxxs-font: (
+  null : 8px,
+  xs : 8px,
+  md : 9px,
+  lg : 10px
+);
+
+/////////////////
+// Colors
+////////////////
+
+
+// $font: "Open Sans", sans-serif;
+$black: #000;
+$text: #343e48;
+$brand: #c33a32;
+$brand-hover: #a9312a;
+$primary: #004987;
+$primary-hover: #0a4366;
+$primary-light: #106096;
+$secondary: #f7ce3c;
+$third: #3fae49;
+$grey: #666666;
+$light-grey: #c2c2c2;
+$lighter-grey: #ececec;
+$grey-bg: #f6f6f6;
+$active: #2c9de3;
+$white: #ffffff;
+$bg: #f1f4fa;
+$overlay: rgba(#1b1b1b, 0.8);
+
+//values
+$value-blue: #0e5491;
+$value-red: #ba3435;
+$value-green: #46ad32;
+
+$font: "Proxima Nova", sans-serif;

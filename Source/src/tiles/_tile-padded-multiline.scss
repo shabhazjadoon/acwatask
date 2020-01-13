@@ -1,0 +1,26 @@
+.tile-padded-multiline {
+        margin-left: 10px;
+    h1 {
+        line-height: 1.6em;
+
+        span {
+            display: inline;
+            position: relative;
+            padding: 5px 0;
+            color: white;
+            background:  rgba(48,48,48,0.8);
+            box-shadow: 10px 0 0  rgba(48,48,48,0.8), -10px 0 0  rgba(48,48,48,0.8);
+            &:after {
+                position: absolute;
+                content: " ";
+                width: 1px;
+                // left: -1px;
+                top: 0;
+                height: 100%;
+                z-index: 1;
+
+            }
+        }
+    }
+
+}
