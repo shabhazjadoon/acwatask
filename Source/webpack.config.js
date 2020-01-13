@@ -20,6 +20,7 @@ module.exports = {
     filename: "[name].[chunkhash].js",
     library: 'Widgets'
   },
+  
   module: {
     rules: [
       {
