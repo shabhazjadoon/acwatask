@@ -145,6 +145,8 @@
                               <div class="SecSelection">
                                   <label><input class="uk-checkbox" name="" type="checkbox" disabled="" checked=""> Main Slider</label><br>
                                   <label><input class="uk-checkbox" name="" type="checkbox"  disabled="" checked=""> News</label><br>
+                                  <label><input class="uk-checkbox Sec-Weather"  name="SectionSelector[8]" value="Sec-Weather" type="checkbox" checked=""> Weather</label><br> 
+                                  <label><input class="uk-checkbox Sec-Values"  name="SectionSelector[9]" value="Sec-Values" type="checkbox" checked=""> Our Values</label><br>
                                   <label><input class="uk-checkbox Sec-Fourms"  name="SectionSelector[1]" value="Sec-Fourms" type="checkbox" checked=""> Fourms</label><br> 
                                   <label><input class="uk-checkbox Sec-IndNews"  name="SectionSelector[2]" value="Sec-IndNews" type="checkbox" checked=""> Industry News</label><br>
                                   <label><input class="uk-checkbox Sec-Workspace" name="SectionSelector[3]"  value="Sec-Workspace" type="checkbox" checked=""> HR Workspace</label><br> 
@@ -386,6 +388,8 @@
                             <div class="SecSelection">
                                 <label><input class="uk-checkbox" name="" type="checkbox" disabled="" checked=""> Main Slider</label><br>
                                 <label><input class="uk-checkbox" name="" type="checkbox"  disabled="" checked=""> News</label><br>
+                                <label><input class="uk-checkbox Sec-Weather"  name="SectionSelector[8]" value="Sec-Weather" type="checkbox" checked=""> Weather</label><br> 
+                                <label><input class="uk-checkbox Sec-Values"  name="SectionSelector[9]" value="Sec-Values" type="checkbox" checked=""> Our Values</label><br>
                                 <label><input class="uk-checkbox Sec-Fourms"  name="SectionSelector[1]" value="Sec-Fourms" type="checkbox" checked=""> Fourms</label><br> 
                                 <label><input class="uk-checkbox Sec-IndNews"  name="SectionSelector[2]" value="Sec-IndNews" type="checkbox" checked=""> Industry News</label><br>
                                 <label><input class="uk-checkbox Sec-Workspace" name="SectionSelector[3]"  value="Sec-Workspace" type="checkbox" checked=""> HR Workspace</label><br> 
@@ -599,7 +603,7 @@
     <div class="page-content">
       <!-- start section -->
       <div class="uk-grid-match uk-grid-small" uk-grid>
-        <div class="uk-width-extend uk-width-2-3@l">
+        <div class="uk-width-extend uk-width-2-3@l" id=Sec-Banner>
           <div class="uk-child-width-1-1 uk-grid-match uk-grid-small" uk-grid>
             <section class="widget widget-slider">
               <div class="uk-height-1-1" uk-slideshow="autoplay:true; animation: push; pause-on-hover:true;">
@@ -671,10 +675,10 @@
           </div>
         </div>
 
-        <div class="uk-width-extend uk-width-1-3@l">
+        <div class="uk-width-extend uk-width-1-3@l" id="ValueWeatherBox">
           <div class="uk-child-width-1-1 uk-grid-match uk-grid-small" uk-grid>
             <!-- Start Weather Widget -->
-            <section class="widget widget-weather" data-locations="Dubai,Cairo,Rabat,Istanbul,Hanoi,Madrid"
+            <section class="widget widget-weather" id="Sec-Weather" data-locations="Dubai,Cairo,Rabat,Istanbul,Hanoi,Madrid"
               data-country="292223,360630,2538475,745044,1581130,3117735" data-dropAlpha="img/drop-alpha.png"
               data-dropColor="img/drop-color.png" data-default="Dubai">
               <div class="wg-wrapper">
@@ -792,7 +796,7 @@
                     </div>
                   </div>
 
-                  <div uk-slider="center: true">
+                  <div uk-slider="center: true" >
                     <ul class="slideshow__nav uk-slider-items uk-child-width-1-3">
                       <li>
                         <a class="nav-item" href="#slide-1" data-value="Dubai">
@@ -844,7 +848,7 @@
 
             <!-- Our Values Widget -->
 
-            <section class="widget widget-values">
+            <section class="widget widget-values" id="Sec-Values">
               <div class="wg-wrapper uk-padding bg-third">
                 <div class="wg-header">
                   <h1>Our values</h1>

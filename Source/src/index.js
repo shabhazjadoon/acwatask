@@ -146,30 +146,150 @@ document.body.removeAttribute("style");
 
 
 
+//Sec-Values
+//Forum element toggle
+// $('.SecSelection .Sec-Weather').click(function(){
+//   if($(this).is(":checked")){
+//    $('#Sec-Weather').removeClass('uk-hidden');
+//    //$('#Sec-IndNews').removeClass('uk-width-1-1@m').addClass('uk-width-1-2@m');
+   
+//  }
+//  else if($(this).is(":not(:checked)")){
+//    $('#Sec-Weather').addClass('uk-hidden');
+//   // $('#Sec-IndNews').removeClass('uk-width-1-2@m').addClass('uk-width-1-1@m');  
+//   }
+// });
+
+
+
+
+
+$('.SecSelection .Sec-Weather').click(function(){ 
+  debugger;
+  if($(this).is(":checked")){
+      if($('#Sec-Values').hasClass('uk-hidden')){
+        $('#Sec-Banner').removeClass('uk-width-1-1@l  uk-animation-scale-rigt').addClass('uk-width-2-3@l');
+      }
+  $('#Sec-Weather').addClass('uk-hidden');
+   $('#Sec-Weather').removeClass('uk-hidden').addClass('uk-animation-scale-down');
+ }
+ else if($(this).is(":not(:checked)")){
+      //check if services section is hidden or not
+        if($('#Sec-Values').hasClass('uk-hidden')){
+               $('#Sec-Banner').removeClass('uk-width-2-3@l').addClass('uk-width-1-1@l uk-animation-scale-right'); 
+        }
+        $('#Sec-Weather').addClass('uk-hidden');
+        $('#Sec-Values').addClass('uk-animation-scale-up');
+  }
+ });
+
+
+
+
+ $('.SecSelection .Sec-Values').click(function(){ 
+  debugger;
+  if($(this).is(":checked")){
+      if($('#Sec-Weather').hasClass('uk-hidden')){
+        $('#Sec-Banner').removeClass('uk-width-1-1@l  uk-animation-scale-up').addClass('uk-width-2-3@l');
+      }
+  $('#Sec-Values').addClass('uk-hidden');
+   $('#Sec-Values').removeClass('uk-hidden  uk-animation-scale-down');
+ }
+ else if($(this).is(":not(:checked)")){
+      //check if services section is hidden or not
+        if($('#Sec-Weather').hasClass('uk-hidden')){
+               $('#Sec-Banner').removeClass('uk-width-2-3@l').addClass('uk-width-1-1@l uk-animation-scale-right'); 
+        }
+        $('#Sec-Values').addClass('uk-hidden');
+  }
+ });
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.SecSelection .Sec-Values').click(function(){
+  if($(this).is(":checked")){
+   $('#Sec-Values').removeClass('uk-hidden');
+   //$('#Sec-IndNews').removeClass('uk-width-1-1@m').addClass('uk-width-1-2@m');
+   
+ }
+ else if($(this).is(":not(:checked)")){
+   $('#Sec-Values').addClass('uk-hidden');
+  // $('#Sec-IndNews').removeClass('uk-width-1-2@m').addClass('uk-width-1-1@m');  
+  }
+});
+
+
+
 //Forum element toggle
 $('.SecSelection .Sec-Fourms').click(function(){
-   if($(this).is(":checked")){
-    $('#Sec-Fourms').removeClass('uk-hidden');
-    $('#Sec-IndNews').removeClass('uk-width-1-1@m').addClass('uk-width-1-2@m');
-    
+  if($(this).is(":checked")){
+   $('#Sec-Fourms').removeClass('uk-hidden');
+   $('#Sec-IndNews').removeClass('uk-width-1-1@m').addClass('uk-width-1-2@m');
+
+ }
+ else if($(this).is(":not(:checked)")){
+   $('#Sec-Fourms').addClass('uk-hidden');
+   $('#Sec-IndNews').removeClass('uk-width-1-2@m').addClass('uk-width-1-1@m');  
   }
-  else if($(this).is(":not(:checked)")){
-    $('#Sec-Fourms').addClass('uk-hidden');
-    $('#Sec-IndNews').removeClass('uk-width-1-2@m').addClass('uk-width-1-1@m');  
-   }
 });
 
 //News section toggle
 $('.SecSelection .Sec-IndNews').click(function(){
-  if($(this).is(":checked")){
-   $('#Sec-IndNews').removeClass('uk-hidden');
-   $('#Sec-Fourms').removeClass('uk-width-1-1@m').addClass('uk-width-1-2@m');
-   
+ if($(this).is(":checked")){
+  $('#Sec-IndNews').removeClass('uk-hidden');
+  $('#Sec-Fourms').removeClass('uk-width-1-1@m').addClass('uk-width-1-2@m');
+
+}
+else if($(this).is(":not(:checked)")){
+  $('#Sec-IndNews').addClass('uk-hidden');
+  $('#Sec-Fourms').removeClass('uk-width-1-2@m').addClass('uk-width-1-1@m');  
  }
- else if($(this).is(":not(:checked)")){
-   $('#Sec-IndNews').addClass('uk-hidden');
-   $('#Sec-Fourms').removeClass('uk-width-1-2@m').addClass('uk-width-1-1@m');  
+});
+
+
+
+//Forum element toggle
+$('.SecSelection .Sec-Fourms').click(function(){
+  if($(this).is(":checked")){ 
+     $('#Sec-Fourms').removeClass('uk-hidden');
+     $('#Sec-IndNews').removeClass('uk-width-1-1@m uk-animation-slide-right').addClass('uk-animation-slide-left uk-width-1-2@m');
+   
+   }
+   else if($(this).is(":not(:checked)")){
+ 
+    $('#Sec-Fourms').addClass('uk-animation-slide-right uk-hidden');
+     $('#Sec-IndNews').removeClass('uk-animation-slide-left  uk-width-1-2@m').addClass('uk-width-1-1@m uk-animation-scale-up'); 
   }
+});
+
+
+
+//News section toggle
+$('.SecSelection .Sec-IndNews').click(function(){
+ if($(this).is(":checked")){
+  $('#Sec-IndNews').removeClass('uk-hidden').addClass('uk-animation-slide-left');
+  $('#Sec-Fourms').removeClass('uk-width-1-1@m uk-animation-slide-left').addClass('uk-animation-slide-right uk-width-1-2@m');
+  
+}
+else if($(this).is(":not(:checked)")){
+  $('#Sec-IndNews').addClass('uk-hidden').removeClass('uk-animation-slide-left');
+  $('#Sec-Fourms').removeClass('uk-width-1-2@m uk-animation-slide-right').addClass('uk-width-1-1@m uk-animation-scale-up');  
+ }
 });
 
 
@@ -177,69 +297,130 @@ $('.SecSelection .Sec-IndNews').click(function(){
 //WorkPlace
 $('.SecSelection .Sec-Workspace').click(function(){
 
-  if($(this).is(":checked")){
-   $('#Sec-Workspace').removeClass('uk-hidden');
-   $('#Sec-Notifications').removeClass('uk-width-1-1@l').addClass('uk-width-3-5@l');
-   
+ if($(this).is(":checked")){
+  $('#Sec-Workspace').removeClass('uk-hidden');
+  $('#Sec-Notifications').removeClass('uk-width-1-1@l  uk-animation-slide-right').addClass('uk-animation-slide-left uk-width-3-5@l');
+  
+}
+else if($(this).is(":not(:checked)")){
+  $('#Sec-Workspace').addClass('uk-animation-slide-right uk-hidden');
+  $('#Sec-Notifications').removeClass('uk-animation-slide-left  uk-width-3-5@l').addClass('uk-width-1-1@l uk-animation-scale-up');  
  }
- else if($(this).is(":not(:checked)")){
-   $('#Sec-Workspace').addClass('uk-hidden');
-   $('#Sec-Notifications').removeClass('uk-width-3-5@l').addClass('uk-width-1-1@l');  
-  }
 });
 
 //Notification
 $('.SecSelection .Sec-Notifications').click(function(){
-   
-  if($(this).is(":checked")){
-   $('#Sec-Notifications').removeClass('uk-hidden');
-   $('#Sec-Workspace').removeClass('uk-width-1-1@l').addClass('uk-width-2-5@l');
-   
+  
+ if($(this).is(":checked")){
+  $('#Sec-Notifications').removeClass('uk-hidden').addClass('uk-animation-slide-left');
+  $('#Sec-Workspace').removeClass('uk-width-1-1@l uk-animation-slide-left').addClass('uk-animation-slide-right uk-width-2-5@l');
+  
+}
+else if($(this).is(":not(:checked)")){
+  $('#Sec-Notifications').addClass('uk-hidden').removeClass('uk-animation-slide-left');
+  $('#Sec-Workspace').removeClass('uk-width-2-5@l uk-animation-slide-right').addClass('uk-width-1-1@l uk-animation-scale-up');  
  }
- else if($(this).is(":not(:checked)")){
-   $('#Sec-Notifications').addClass('uk-hidden');
-   $('#Sec-Workspace').removeClass('uk-width-2-5@l').addClass('uk-width-1-1@l');  
-  }
 });
 
 //Events
 $('.SecSelection .Sec-Events').click(function(){
-  if($(this).is(":checked")){
-   $('#Sec-Events').removeClass('uk-hidden');
+ if($(this).is(":checked")){
+  $('#Sec-Events').removeClass('uk-hidden uk-animation-scale-down').addClass('uk-animation-scale-up');
+}
+else if($(this).is(":not(:checked)")){
+  $('#Sec-Events').addClass('uk-animation-scale-down uk-hidden').removeClass('uk-animation-scale-down');
  }
- else if($(this).is(":not(:checked)")){
-   $('#Sec-Events').addClass('uk-hidden');
-  }
 });
 
-//Offer
-$('.SecSelection .Sec-Offers').click(function(){
-   
-  if($(this).is(":checked")){
-   $('#Sec-Offers').removeClass('uk-hidden');
-   $('#Sec-Poll').removeClass('uk-width-1-1@m').addClass('uk-width-1-3@m');
-   
- }
- else if($(this).is(":not(:checked)")){
-   $('#Sec-Offers').addClass('uk-hidden');
-   $('#Sec-Poll').removeClass('uk-width-1-3@m').addClass('uk-width-1-1@m');  
-  }
-});
+
 
 //poll
-$('.SecSelection .Sec-Poll').click(function(){
-   
-  if($(this).is(":checked")){
-   $('#Sec-Poll').removeClass('uk-hidden');
-   $('#Sec-Offers').removeClass('uk-width-1-1@m').addClass('uk-width-2-3@m');
-   
+
+$('.SecSelection .Sec-Poll').click(function(){ 
+ debugger;
+ if($(this).is(":checked")){
+     if($('#PollServices').hasClass('uk-hidden')){
+       $('#PollServices').removeClass('uk-hidden');
+       $('#Sec-Offers').removeClass('uk-width-1-1@m  uk-animation-scale-up').addClass('uk-width-2-3@m');
+     }
+  $('#Sec-Poll').removeClass('uk-hidden  uk-animation-scale-up');
+  $('#Sec-Services').removeClass('uk-animation-scale-up');
+  
+}
+else if($(this).is(":not(:checked)")){
+     //check if services section is hidden or not
+       if($('#Sec-Services').hasClass('uk-hidden')){
+              $('#PollServices').addClass('uk-hidden');
+              $('#Sec-Offers').removeClass('uk-width-2-3@m').addClass('uk-width-1-1@m uk-animation-scale-up'); 
+       }
+       
+       $('#Sec-Poll').addClass('uk-hidden uk-animation-scale-up');
+       $('#Sec-Services').addClass('uk-animation-scale-up');
  }
- else if($(this).is(":not(:checked)")){
-   $('#Sec-Poll').addClass('uk-hidden');
-   $('#Sec-Offers').removeClass('uk-width-2-3@m').addClass('uk-width-1-1@m');  
-  }
 });
 
 
 
+// Services
+$('.SecSelection .Sec-Services').click(function(){
+ debugger; 
+ if($(this).is(":checked")){
  
+  $('#Sec-Services').removeClass('uk-hidden  uk-animation-scale-up');
+  $('#Sec-Poll').removeClass('uk-animation-scale-up');
+  $('#PollServices').removeClass('uk-hidden');
+  $('#Sec-Offers').removeClass('uk-width-1-1@m  uk-animation-scale-up').addClass('uk-width-2-3@m');
+  
+}
+else if($(this).is(":not(:checked)")){
+   //check if Poll section is hidden or not
+   if($('#Sec-Poll').hasClass('uk-hidden')){
+     $('#PollServices').addClass('uk-hidden');
+     $('#Sec-Offers').removeClass('uk-width-2-3@m').addClass('uk-width-1-1@m uk-animation-scale-up'); 
+ }
+  $('#Sec-Services').addClass('uk-hidden uk-animation-scale-up');
+  $('#Sec-Poll').addClass('uk-animation-scale-up');  
+ }
+});
+
+
+//Offer & promotions
+$('.SecSelection .Sec-Offers').click(function(){
+ debugger;
+ if($(this).is(":checked")){ 
+    $('#Sec-Offers').removeClass('uk-hidden').addClass('uk-animation-slide-right'); 
+    $('#PollServices').removeClass('uk-width-1-1@m uk-animation-slide-right').addClass('uk-animation-slide-left uk-width-1-3@m');
+  
+  }
+  else if($(this).is(":not(:checked)")){
+
+   $('#Sec-Offers').addClass('uk-hidden');
+    $('#PollServices').removeClass('uk-animation-slide-left  uk-width-1-3@m').addClass('uk-width-1-1@m uk-animation-scale-up'); 
+ }
+});
+
+
+
+// $(window).on("load", function(){
+
+//  let SelectedBoxs = [
+//    { "ClassName":"Sec-Fourms", "Value":"false"},
+//    { "ClassName":"Sec-IndNews", "Value":"true"},
+//    { "ClassName":"Sec-Workspace", "Value":"true"}
+//  ];
+
+//  for(let i=0; i<SelectedBoxs.length; i++)
+//  {
+//    var item=SelectedBoxs[i];
+//        if(item!=null)
+//        {
+//        var checkboxClass =item.ClassName;
+//        var value =item.Value;
+
+//        if(value=='false'){
+//          debugger;
+//          $('.'+checkboxClass).trigger('click');
+//        } 
+//        }
+// }
+// });
