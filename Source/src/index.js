@@ -398,9 +398,6 @@ $('.SecSelection .Sec-Offers').click(function(){
     $('#PollServices').removeClass('uk-animation-slide-left  uk-width-1-3@m').addClass('uk-width-1-1@m uk-animation-scale-up'); 
  }
 });
-
-
-
 // $(window).on("load", function(){
 
 //  let SelectedBoxs = [
